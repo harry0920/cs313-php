@@ -70,12 +70,9 @@ session_start();
 
     if(isset($_SESSION['LoggedIn']) && $_SESSION['LoggedIn'] == true)
     {
-        echo '<a id="logOut">Log Out</a>';
-
+        echo '<a id="logOut" href="logout.php">Log Out</a>';
 
     }
-
-
 
     ?>
 </p>
