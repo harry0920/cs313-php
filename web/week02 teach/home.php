@@ -52,18 +52,18 @@
 <p class=message>Welcome,
     <?php
 
-    if(ifset($_SESSION['Admin']) && $_SESSION['Admin'] == true)
+    if(isset($_SESSION['Admin']) && $_SESSION['Admin'] == true)
     {
         echo 'You are logged in as Admin';
     }
-    else if(ifset($_SESSION['Tester'])  && $_SESSION['Tester'] == true)
+    else if(isset($_SESSION['Tester'])  && $_SESSION['Tester'] == true)
     {
         echo 'You are logged in as Tester';
     }
     else{
         echo 'You are not logged In';
     }
-    ?>!
+    ?>
 
 
     <?php
