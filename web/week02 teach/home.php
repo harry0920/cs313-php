@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -72,9 +72,10 @@ session_start();
     {
         echo '<a id="logOut">Log Out</a>';
 
-        session_unset();
-        session_destroy();
+
     }
+
+
 
     ?>
 </p>

@@ -41,27 +41,11 @@
 
 
         <div class="loginbtns">
-            <a id="loginAdmin" onclick="">Login As Admin</a>
+            <a id="loginAdmin" href="admin.php">Login As Admin</a>
             <br>
-            <a id="loginTester" onclick="loginTester">Login as Tester</a>
+            <a id="loginTester" href="tester.php">Login as Tester</a>
         </div>
 
     </body>
 
-<script>
-
-    function loginAdmin(){
-
-        $_SESSION['LoggedIn'] = true;
-       $_SESSION['Admin'] = true;
-        $_SESSION['Tester'] = false;
-    }
-    function loginTester(){
-        $_SESSION['LoggedIn'] = true;
-        $_SESSION['Tester'] = true;
-        $_SESSION['Admin'] = false;
-    }
-
-
-</script>
 </html>
