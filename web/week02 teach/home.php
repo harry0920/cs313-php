@@ -6,7 +6,9 @@
 
 <body>
 <header>
-
+    <?php
+    include 'nav.php';
+    ?>
 </header>
 <h1>
     Food and Stuff
