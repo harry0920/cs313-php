@@ -29,6 +29,8 @@
         color: black;
     }
 </style>
+<div class="nav">
 <a class = button href="about-us.php">About Us</a>
 <a class = button href="home.php">Home</a>
 <a class = bar href="login.php">Login</a>
+</div>
