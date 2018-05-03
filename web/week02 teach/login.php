@@ -3,7 +3,7 @@
     <head>
         <title>Food Stuff- Login Page</title>
         <style>
-            .loginbtns div{
+            .loginbtns a{
                 display:block;
                 border-style:solid;
                 border-color:#bbb #888 #666 #aaa;
@@ -18,7 +18,7 @@
                 font-weight:900;
             }
 
-            .loginbtns:hover div{
+            .loginbtns:hover a{
                 border-color: #666 #aaa #bbb #888;
                 border-width:4px 3px 3px 4px;
                 color:#000;
@@ -40,6 +40,7 @@
 
         <div class="loginbtns">
             <a>Login As Admin</a>
+            <br>
             <a>Login as Tester</a>
         </div>
 
