@@ -33,6 +33,5 @@
 
 <div class="nav">
 <a class = button href="assignments.php">Assignments</a>
-<a class = button href="~/index.php">Home</a>
-<a class = bar href="login.php">Login</a>
+<a class = button href="~index.php">Home</a>
 </div>
