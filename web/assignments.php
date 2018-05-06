@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            CS313 Home Page - Harry Vashisht
+            Assignments Page
         </title>   
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
@@ -11,12 +11,14 @@
         include 'nav.php';
         ?>
         <h1>
-            Harry Vashisht's Home Page.
+           CS 313 Assignments Page
         </h1>
-        <a href="#">Assignments</a>
-    
-        <p id="imgWrapper">
-            <img src="img.jpg" alt="image">
-        </p>
+        <a href="#">Assignments 1</a>
+        <a href="#">Assignments 1</a>
+        <a href="#">Assignments 1</a>
+        <a href="#">Assignments 1</a>
+        <a href="#">Assignments 1</a>
+        <a href="#">Assignments 1</a>
+        
     </body>
 </html>

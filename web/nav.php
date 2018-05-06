@@ -1,11 +1,7 @@
 <ul id="menu">
-        <li><a href="#">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li>
-            <a href="#">About ￬</a>
-            <ul class="hidden">
-                <li><a href="#">Who We Are</a></li>
-                <li><a href="#">What We Do</a></li>
-            </ul>
+            <a href="about.php">About</a>
         </li>
         <li>
             <a href="#">Portfolio ￬</a>
@@ -16,7 +12,7 @@
             </ul>
         </li>
         <li>
-            <a href="#">Assignments</a>
+            <a href="assignments.php">Assignments</a>
             <ul class="hidden">
                 <li><a href="#">Assignment1</a></li>
                 <li><a href="#">Assignment2</a></li>
