@@ -16,5 +16,9 @@
             Harry Vashisht's Home Page.
         </h1>
         <a href="#">Assignments</a>
+    
+        <p>
+    <img src="img.jpg" alt="image">
+        </p>
     </body>
 </html>
