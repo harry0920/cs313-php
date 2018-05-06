@@ -1,37 +1,20 @@
-
-<style>
-    .button {
-        margin: -10px;
-        border-left: 40px solid rgb(100,200,100);
-        border-top: 50px solid rgb(100,200,100);
-        border-bottom: 10px solid rgb(100,200,100);
-        border-right: 30px solid rgb(100,200,100);
-        background-color: rgb(100,200,100);
-        font-family: "Calibri", Times, serif;
-        color: white;
-    }
-    .bar{
-        margin: -10px;
-        border-left: 40px solid rgb(100,200,100);
-        border-top: 50px solid rgb(100,200,100);
-        border-bottom: 10px solid rgb(100,200,100);
-        border-right: 600px solid rgb(100,200,100);
-        background-color: rgb(100,200,100);
-        font-family: "Calibri", Times, serif;
-        color: white;
-    }
-    a:link {
-        text-decoration: none;
-    }
-    a:hover {
-        background-color: white;
-        border-color: white;
-        color: black;
-    }
-</style>
-
-
-<div class="nav">
-<a class = button href="assignments.php">Assignments</a>
-<a class = button href="~index.php">Home</a>
-</div>
+<ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">About ￬</a>
+            <ul class="hidden">
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">What We Do</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Portfolio ￬</a>
+            <ul class="hidden">
+                <li><a href="#">Photography</a></li>
+                <li><a href="#">Web & User Interface Design</a></li>
+                <li><a href="#">Illustration</a></li>
+            </ul>
+        </li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+</ul>
