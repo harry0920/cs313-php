@@ -12,7 +12,7 @@
             </ul>
         </li>
         <li>
-            <a href="assignments.php">Assignments</a>
+            <a href="assignments.php">Assignments  ￬</a>
             <ul class="hidden">
                 <li><a href="#">Assignment1</a></li>
                 <li><a href="#">Assignment2</a></li>
