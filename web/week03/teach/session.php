@@ -14,7 +14,7 @@ $counter = $_SESSION["Counter"];
 <body>
 <?php
 
-    echo "Counter: $Counter";
+    echo "Counter: $counter";
 
 ?>
 </body>
