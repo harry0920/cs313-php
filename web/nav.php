@@ -1,7 +1,7 @@
 <ul id="menu">
         <li><a href="index.php">Home</a></li>
         <li>
-            <a href="about.php">About</a>
+            <a href="week02/about.php">About</a>
         </li>
         <li>
             <a href="#">Portfolio ￬</a>
@@ -12,7 +12,7 @@
             </ul>
         </li>
         <li>
-            <a href="assignments.php">Assignments  ￬</a>
+            <a href="week02/assignments.php">Assignments  ￬</a>
             <ul class="hidden">
                 <li><a href="#">Assignment1</a></li>
                 <li><a href="#">Assignment2</a></li>
