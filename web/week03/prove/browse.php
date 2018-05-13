@@ -5,6 +5,8 @@
         CS313 Home Page - Harry Vashisht
     </title>
     <link rel="stylesheet" type="text/css" href="../../styles/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
     <body>
         <?php
@@ -13,13 +15,13 @@
         <h1>
             Harry Vashisht's Home Page.
         </h1>
-        <form method="POST" action="results.php">
+        <form class="browsefrom" method="POST" action="view-cart.php">
             <p>Choose Item you want to buy: </p>
 
             <label for="shoe1">Nike Shoe 1</label>
             <div>
                 <img src="images/shoe1.jpg" alt="shoe1">
-                <button>+</button>
+                <button class="w3-circle">+</button>
             </div>
 
             <label for="shoe2">Nike Shoe 2</label>
@@ -69,8 +71,6 @@
                 <img src="images/shoe9.jpg" alt="shoe9">
                 <button>+</button>
             </div>
-
-
 
             <input type="submit" value="Submit Answers">
 
