@@ -27,12 +27,19 @@ $products = array("shoe1", "shoe2", "shoe3", "shoe4", "shoe5", "shoe6", "shoe7",
         <?php
         for ($i=0; $i< count($products); $i++) {
 
-            echo "<label for='".$products[i]."'>".
+            /**echo "<label for='".$products[i]."'>".
                 "<div>".
                 "<img src='images/".$products[i].".jpg' alt='".$products[i]."'>" .
                 " <button onclick='addshoe('".$products[i]."')' class='w3-circle w3-green' >+</button>" .
                 "</div>".
                 "</label>";
+**/
+
+            echo "<label for=\"$products[i]\">Nike Shoe 1</label>
+            <div>
+                <img src=\"images/$products[i].jpg\" alt=\"$products[i]\">
+                <button onclick=\"addshoe('$products[i]')\" class=\"w3-circle w3-green\" >+</button>
+            </div>";
 
 
         }
