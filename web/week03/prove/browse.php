@@ -37,7 +37,7 @@ $products = array("shoe1", "shoe2", "shoe3", "shoe4", "shoe5", "shoe6", "shoe7",
 
             echo "<label for=\"$products[$i]\">Nike Shoe $i</label>"
             ."<div>"
-            ."<img src=\"images/$products[$i]\.jpg\" alt=\"$products[$i]\">"
+            ."<img src=\"images/$products[$i].jpg\" alt=\"$products[$i]\">"
             ."<button onclick=\"addshoe('$products[$i]')\" class=\"w3-circle w3-green\" >+</button>"
             ."</div>";
 
