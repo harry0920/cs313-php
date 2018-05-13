@@ -1,6 +1,6 @@
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 @import url(https://fonts.googleapis.com/css?family=Oswald:300,400);
-.snip1423 {
+.shoes {
     font-family: 'Oswald', Arial, sans-serif;
     position: relative;
     float: left;
@@ -19,47 +19,47 @@
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
-.snip1423 * {
+.shoes * {
     -webkit-box-sizing: padding-box;
     box-sizing: padding-box;
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
-.snip1423 img {
+.shoes img {
     max-width: 100%;
     vertical-align: top;
     position: relative;
 }
-.snip1423 figcaption {
+.shoes figcaption {
     padding: 20px 15px;
 }
-.snip1423 h3,
-.snip1423 p {
+.shoes h3,
+.shoes p {
     margin: 0;
 }
-.snip1423 h3 {
+.shoes h3 {
     font-size: 1.3em;
     font-weight: 400;
     margin-bottom: 5px;
     text-transform: uppercase;
 }
-.snip1423 p {
+.shoes p {
     font-size: 0.9em;
     letter-spacing: 1px;
     font-weight: 300;
 }
-.snip1423 .price {
+.shoes .price {
     font-weight: 500;
     font-size: 1.4em;
     line-height: 48px;
     letter-spacing: 1px;
 }
-.snip1423 .price s {
+.shoes .price s {
     margin-right: 5px;
     opacity: 0.5;
     font-size: 0.9em;
 }
-.snip1423 i {
+.shoes i {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -74,7 +74,7 @@
     font-size: 1.6em;
     border: 4px solid #ffffff;
 }
-.snip1423 a {
+.shoes a {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -82,13 +82,13 @@
     right: 0;
     z-index: 1;
 }
-.snip1423:hover,
-.snip1423.hover {
+.shoes:hover,
+.shoes.hover {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
 }
-.snip1423:hover i,
-.snip1423.hover i {
+.shoes:hover i,
+.shoes.hover i {
     background-color: #2980b9;
 }
 /* Demo purposes only */
