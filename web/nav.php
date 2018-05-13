@@ -16,7 +16,7 @@
             <ul class="hidden">
                 <li><a href="#">Assignment1</a></li>
                 <li><a href="#">Assignment2</a></li>
-                 <li><a href="#">Assignment3</a></li>
+                 <li><a href="week03/prove/browse.php">Assignment3</a></li>
                  <li><a href="#">Assignment4</a></li>
                  <li><a href="#">Assignment5</a></li>
             </ul>
