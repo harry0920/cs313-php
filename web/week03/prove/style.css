@@ -4,6 +4,9 @@
 body {
     background-color: #212121;
 }
+.mainDiv{
+    padding-top: 30px;
+}
 .shoes {
     font-family: 'Oswald', Arial, sans-serif;
     position: relative;
@@ -96,7 +99,3 @@ body {
     background-color: #2980b9;
 }
 
-h1{
-    margin-top:30px;
-    color: white;
-}

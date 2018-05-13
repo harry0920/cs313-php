@@ -35,7 +35,7 @@ if ( isset($_GET["add"]) )
         <?php
         include '../../nav.php';
         ?>
-      
+        <div class="mainDiv">
 
 
         <?php
@@ -56,7 +56,7 @@ if ( isset($_GET["add"]) )
 
         }
         ?>
-
+        </div>
 
         <form class="browseform" action="view-cart.php">
             <input type="submit" value="Shopping Cart">
