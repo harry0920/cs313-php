@@ -60,8 +60,12 @@ if ( isset($_GET["add"]) )
 
         }
         ?>
-        <form class="browseform" action="view-cart.php">
-            <input type="submit" value="View Cart">
+
+
+        <form class="btn btn-info btn-lg" action="view-cart.php">
+            <a type="submit" href="#" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+            </a>
         </form>
     </body>
 
