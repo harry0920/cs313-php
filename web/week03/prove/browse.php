@@ -42,15 +42,29 @@ if ( isset($_GET["add"]) )
 
         <?php
         for ($i=0; $i< count($products); $i++)
-        {   $j = $i+1;
-            echo "<label for=\"$products[$i]\">Nike Shoe $j</label>"
+        {
+            $j = $i+1;
+            $y = $amounts[$i] + 20;
+
+            echo "<figure class=\"snip1423\">"
+                ."<img src=\"images/$products[$i].jpg\" alt=\"$products[$i]\">"
+                ."<figcaption>"
+                ."<h3>Nike Shoe $j</h3>"
+                ." <p>Feel the latest Design!</p>"
+                ."<div class=\"price\"><s>$y</s>$amounts[$i]</div>"
+                ." </figcaption><i class=\"ion-android-cart\"></i>"
+                ."<a href=\"?add=$i\"></a>"
+                ."</figure>";
+
+          /**      ."<label class=\"label\" for=\"$products[$i]\">Nike Shoe $j</label>"
             ."<div>"
             ."<img src=\"images/$products[$i].jpg\" alt=\"$products[$i]\">"
             ."<a href=\"?add=$i\" class=\"w3-circle w3-green\" > Add to Cart</a>"
             ."</div>";
+           *
+           * ***/
         }
         ?>
-
         <form class="browseform" action="view-cart.php">
             <input type="submit" value="View Cart">
         </form>
