@@ -21,59 +21,64 @@
             <label for="shoe1">Nike Shoe 1</label>
             <div>
                 <img src="images/shoe1.jpg" alt="shoe1">
-                <button class="w3-circle">+</button>
+                <button onclick="addshoe('shoe1')" class="w3-circle w3-green" >+</button>
             </div>
 
             <label for="shoe2">Nike Shoe 2</label>
             <div>
                 <img src="images/shoe2.jpg" alt="shoe2">
-                <button>+</button>
+                <button onclick="addshoe('shoe2')" class="w3-circle w3-green" >+</button>
             </div>
 
             <label for="shoe3">Nike Shoe 3</label>
             <div>
                 <img src="images/shoe3.jpg" alt="shoe3">
-                <button>+</button>
+                <button onclick="addshoe('shoe3')" class="w3-circle w3-green" >+</button>
             </div>
 
             <label for="shoe4">Nike Shoe 4</label>
             <div>
                 <img src="images/shoe4.jpg" alt="shoe4">
-                <button>+</button>
+                <button onclick="addshoe('shoe4')" class="w3-circle w3-green" >+</button>
             </div>
 
             <label for="shoe5">Nike Shoe 5</label>
             <div>
                 <img src="images/shoe5.jpg" alt="shoe5">
-                <button>+</button>
+                <button onclick="addshoe('shoe5')" class="w3-circle w3-green" >+</button>
             </div>
 
             <label for="shoe6">Nike Shoe 6</label>
             <div>
                 <img src="images/shoe6.jpg" alt="shoe6">
-                <button>+</button>
+                <button onclick="addshoe('shoe6')" class="w3-circle w3-green" >+</button>
             </div>
 
             <label for="shoe7">Nike Shoe 7</label>
             <div>
                 <img src="images/shoe7.jpg" alt="shoe7">
-                <button>+</button>
+                <button onclick="addshoe('shoe7')" class="w3-circle w3-green" >+</button>
             </div>
 
             <label for="shoe8">Nike Shoe 8</label>
             <div>
                 <img src="images/shoe8.jpg" alt="shoe8">
-                <button>+</button>
+                <button onclick="addshoe('shoe8')" class="w3-circle w3-green" >+</button>
             </div>
 
             <label for="shoe9">Nike Shoe 9</label>
             <div>
                 <img src="images/shoe9.jpg" alt="shoe9">
-                <button>+</button>
+                <button onclick="addshoe('shoe9')" class="w3-circle w3-green" >+</button>
             </div>
 
             <input type="submit" value="Submit Answers">
-
         </form>
     </body>
+
+    <script>
+        function addshoe(shoenumber){
+
+        }
+    </script>
 </html>
