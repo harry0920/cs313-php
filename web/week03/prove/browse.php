@@ -80,7 +80,7 @@
         function addshoe(shoenumber){
             $.ajax({
                 type: "POST",
-                url: "some.php",
+                url: "cart.php",
                 data: { name: shoenumber }
             }).done(function( msg ) {
                 alert( "Added to Cart" + msg );
