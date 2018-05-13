@@ -101,8 +101,11 @@ if ( isset($_SESSION["cart"]) ) {
             <td colspan="7">Total : <?php echo($total); ?></td>
         </tr>
 
-        <tr><a href="?reset=true">Reset Cart</a></tr>
+        <tr>
+            <td><a href="?reset=true">Reset Cart</a></tr>
+        </td>
     </table>
+
     <?php
 }
 ?>
