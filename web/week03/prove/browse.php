@@ -52,7 +52,7 @@ if ( isset($_GET["add"]) )
         ?>
 
         <form class="browseform" action="view-cart.php">
-            <input type="submit" value="Submit Answers">
+            <input type="submit" value="View Cart">
         </form>
     </body>
 
