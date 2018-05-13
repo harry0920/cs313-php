@@ -51,13 +51,13 @@ if ( isset($_GET["add"]) )
             echo "<figure class=\"shoes\">"
                 ."<img src=\"images/$products[$i].jpg\" alt=\"$names[$i]\">"
                 ."<figcaption>"
-                ."<h3$names[$i]</h3>"
+                ."<h3>$names[$i]</h3>"
                 ." <p>Feel the latest Design!</p>"
                 ."<div class=\"price\"><s>$y</s>$amounts[$i]</div>"
                 ." </figcaption><i class=\"ion-android-cart\"></i>"
                 ."<a href=\"?add=$i\"></a>"
                 ."</figure>";
-            
+
         }
         ?>
         <form class="browseform" action="view-cart.php">
