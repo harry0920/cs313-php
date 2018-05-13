@@ -15,7 +15,7 @@
         <h1>
             Harry Vashisht's Home Page.
         </h1>
-        <form class="browsefrom" method="POST" action="view-cart.php">
+
             <p>Choose Item you want to buy: </p>
 
             <label for="shoe1">Nike Shoe 1</label>
@@ -71,14 +71,22 @@
                 <img src="images/shoe9.jpg" alt="shoe9">
                 <button onclick="addshoe('shoe9')" class="w3-circle w3-green" >+</button>
             </div>
-
+        <form class="browsefrom" method="POST" action="view-cart.php">
             <input type="submit" value="Submit Answers">
         </form>
     </body>
 
     <script>
         function addshoe(shoenumber){
+            $.ajax({
+                type: "POST",
+                url: "some.php",
+                data: { name: shoenumber }
+            }).done(function( msg ) {
+                alert( "Added to Cart" + msg );
+            });
 
         }
+
     </script>
 </html>
