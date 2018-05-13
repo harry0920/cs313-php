@@ -36,10 +36,10 @@ if ( isset($_GET["add"]) )
         include '../../nav.php';
         ?>
         <h1>
-            Harry Vashisht's Home Page.
+            Choose Item you want to buy:
         </h1>
 
-            <p>Choose Item you want to buy: </p>
+
 
 
         <?php
