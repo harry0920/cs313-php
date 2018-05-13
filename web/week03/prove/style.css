@@ -91,7 +91,11 @@
 .shoes.hover i {
     background-color: #2980b9;
 }
-/* Demo purposes only */
+
+h1{
+    top:30px;
+    text-decoration-color: white;
+}
 body {
     background-color: #212121;
 }
