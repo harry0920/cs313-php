@@ -102,8 +102,8 @@ if ( isset($_SESSION["cart"]) ) {
         </tr>
 
         <tr>
-            <td><a href="?reset=true">Reset Cart</a></tr>
-        </td>
+            <td><a href="?reset=true">Reset Cart</a></td>
+        </tr>
     </table>
 
     <?php
