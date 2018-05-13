@@ -30,6 +30,7 @@ if ( isset($_GET["add"]) )
     <link rel="stylesheet" type="text/css" href="../../styles/style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
     <body>
         <?php
@@ -63,7 +64,7 @@ if ( isset($_GET["add"]) )
 
 
         <form class="btn btn-info btn-lg" action="view-cart.php">
-            <a type="submit" href="#" class="btn btn-info btn-lg">
+            <a type="submit" class="btn btn-info btn-lg">
                 <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
             </a>
         </form>
