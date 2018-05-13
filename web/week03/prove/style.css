@@ -1,5 +1,9 @@
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 @import url(https://fonts.googleapis.com/css?family=Oswald:300,400);
+
+body {
+    background-color: #212121;
+}
 .shoes {
     font-family: 'Oswald', Arial, sans-serif;
     position: relative;
