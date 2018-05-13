@@ -71,22 +71,25 @@
                 <img src="images/shoe9.jpg" alt="shoe9">
                 <button onclick="addshoe('shoe9')" class="w3-circle w3-green" >+</button>
             </div>
-        <form class="browsefrom" method="POST" action="view-cart.php">
+        <form class="browseform" method="POST" action="view-cart.php">
             <input type="submit" value="Submit Answers">
         </form>
     </body>
 
     <script>
         function addshoe(shoenumber){
-            $.ajax({
-                type: "POST",
-                url: "cart.php",
-                data: { name: shoenumber }
-            }).done(function( msg ) {
-                alert( "Added to Cart" + msg );
-            });
+            var req = new XMLHttpRequest();
+            req.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+
+                   // document.getElementById("list").innerHTML = this.responseText;
+                }
+            }
+            req.open("GET", "cart.php", true);
+            req.send();
+
+
 
         }
-
     </script>
 </html>
