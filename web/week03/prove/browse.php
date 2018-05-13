@@ -35,11 +35,7 @@ if ( isset($_GET["add"]) )
         <?php
         include '../../nav.php';
         ?>
-        <h1>
-            Choose Item you want to buy:
-        </h1>
-
-
+      
 
 
         <?php
