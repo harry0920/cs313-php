@@ -1,3 +1,8 @@
+<?php
+$products = array("shoe1", "shoe2", "shoe3", "shoe4", "shoe5", "shoe6", "shoe7", "shoe8", "shoe9");
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +22,31 @@
         </h1>
 
             <p>Choose Item you want to buy: </p>
+
+
+        <?php
+        for ($i=0; $i< count($products); $i++) {
+
+            echo "<label for='$products[i]'>" .
+                "<div>" .
+                "<img src='images/$products[i].jpg' alt='$products[i]'>" .
+                " <button onclick='addshoe('$products[i]')' class='w3-circle w3-green' >+</button>" .
+                "</div>" .
+                "</label>";
+
+
+        }
+
+            ?>
+      <!--
+            <label for="shoe1">Nike Shoe 1</label>
+            <div>
+                <img src="images/shoe1.jpg" alt="shoe1">
+                <button onclick="addshoe('shoe1')" class="w3-circle w3-green" >+</button>
+            </div>
+
+
+
 
             <label for="shoe1">Nike Shoe 1</label>
             <div>
@@ -71,6 +101,8 @@
                 <img src="images/shoe9.jpg" alt="shoe9">
                 <button onclick="addshoe('shoe9')" class="w3-circle w3-green" >+</button>
             </div>
+
+            -->
         <form class="browseform" method="POST" action="view-cart.php">
             <input type="submit" value="Submit Answers">
         </form>
