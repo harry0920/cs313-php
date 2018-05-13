@@ -4,7 +4,7 @@
     <title>
         CS313 Home Page - Harry Vashisht
     </title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/style.css">
 </head>
 <body>
 <?php
