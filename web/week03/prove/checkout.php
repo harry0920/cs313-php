@@ -25,5 +25,15 @@ include '../../nav.php';
 <h1>
     Checkout Page
 </h1>
+
+<form method="post">
+    <labal for="address"></labal>
+    <textarea name="address" cols="50" maxlength="100">
+
+    </textarea>
+    <button type="submit"><a href="confirm.php">Confirm Purchase</a></button>
+
+</form>
+<button><a href="checkout.php">Return to Checkout</a></button>
 </body>
 </html>
