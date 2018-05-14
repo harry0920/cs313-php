@@ -105,13 +105,22 @@ if ( isset($_SESSION["cart"]) ) {
         <tr>
             <td colspan="7">Total : <?php echo($total); ?></td>
         </tr>
-        <tr>
-            <td><a href="?reset=true">Reset Cart</a></td>
-        </tr>
     </table>
+            <button><a href="?reset=true">Reset Cart</a></button>
+
+
+
+
+
+
+
 
     <?php
 }
 ?>
+
+<button><a href="browse.php">Add more items</a></button>
+<button><a href=checkout.php">Proceed to Checkout</a></button>
+
 </body>
 </html>
