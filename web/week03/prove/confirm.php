@@ -7,6 +7,13 @@ $names = array("Nike Lunar Epic Flyknit", "Nike SB Koston Hyperfeel 3.", "NikeLa
     "Skate Mental x Nike SB Janoski Pepperoni Pizza", "NikeLab Air Zoom LWP x Kim Jones.", "Atmos x Nike Air Max 1 Safari.",
     "NikeLab Air Rift Wrap", "Nike Air Yeezy", "Nike Total 90");
 
+
+$address = $_POST['address'];
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,13 +25,16 @@ $names = array("Nike Lunar Epic Flyknit", "Nike SB Koston Hyperfeel 3.", "NikeLa
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body style="background-color:whitesmoke;">
 <?php
 include '../../nav.php';
 ?>
 <h1>
     Confirmation Page
 </h1>
+
+<p><?php echo $address;?> </p>
+
 
 </body>
 </html>

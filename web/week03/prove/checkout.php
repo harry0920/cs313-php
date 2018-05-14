@@ -18,7 +18,7 @@ $names = array("Nike Lunar Epic Flyknit", "Nike SB Koston Hyperfeel 3.", "NikeLa
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body style="background-color:whitesmoke;">
 <?php
 include '../../nav.php';
 ?>
