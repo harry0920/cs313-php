@@ -3,6 +3,9 @@ session_start();
 
 $products = array("shoe1", "shoe2", "shoe3", "shoe4", "shoe5", "shoe6", "shoe7", "shoe8", "shoe9");
 $amounts = array("120.99", "130.99", "167.99", "120.99", "130.99", "167.99", "120.99", "130.99", "167.99");
+$names = array("Nike Lunar Epic Flyknit", "Nike SB Koston Hyperfeel 3.", "NikeLab ACG Lupinek Flyknit Low SFB.",
+    "Skate Mental x Nike SB Janoski Pepperoni Pizza", "NikeLab Air Zoom LWP x Kim Jones.", "Atmos x Nike Air Max 1 Safari.",
+    "NikeLab Air Rift Wrap", "Nike Air Yeezy", "Nike Total 90");
 
 
 
@@ -87,6 +90,7 @@ if ( isset($_SESSION["cart"]) ) {
             ?>
             <tr>
                 <td><?php echo( $products[$_SESSION["cart"][$i]] ); ?></td>
+                <td><?php echo( $names[$_SESSION["cart"][$i]] ); ?></td>
                 <td width="10px">&nbsp;</td>
                 <td><?php echo( $_SESSION["qty"][$i] ); ?></td>
                 <td width="10px">&nbsp;</td>
