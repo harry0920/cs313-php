@@ -77,7 +77,7 @@ if ( isset($_SESSION["cart"]) ) {
     <table>
         <tr>
             <th>Product</th>
-            <th width="10px">&nbsp;</th>
+            <th width="20px">&nbsp;</th>
             <th>Qty</th>
             <th width="10px">&nbsp;</th>
             <th>Amount</th>
@@ -89,9 +89,8 @@ if ( isset($_SESSION["cart"]) ) {
         foreach ( $_SESSION["cart"] as $i ) {
             ?>
             <tr>
-                <td><?php echo( $products[$_SESSION["cart"][$i]] ); ?></td>
                 <td><?php echo( $names[$_SESSION["cart"][$i]] ); ?></td>
-                <td width="10px">&nbsp;</td>
+                <td width="20px">&nbsp;</td>
                 <td><?php echo( $_SESSION["qty"][$i] ); ?></td>
                 <td width="10px">&nbsp;</td>
                 <td><?php echo( $_SESSION["amounts"][$i] ); ?></td>
@@ -106,7 +105,6 @@ if ( isset($_SESSION["cart"]) ) {
         <tr>
             <td colspan="7">Total : <?php echo($total); ?></td>
         </tr>
-
         <tr>
             <td><a href="?reset=true">Reset Cart</a></td>
         </tr>
