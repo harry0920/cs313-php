@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+$products = array("shoe1", "shoe2", "shoe3", "shoe4", "shoe5", "shoe6", "shoe7", "shoe8", "shoe9");
+$amounts = array("120.99", "130.99", "167.99", "120.99", "130.99", "167.99", "120.99", "130.99", "167.99");
+$names = array("Nike Lunar Epic Flyknit", "Nike SB Koston Hyperfeel 3.", "NikeLab ACG Lupinek Flyknit Low SFB.",
+    "Skate Mental x Nike SB Janoski Pepperoni Pizza", "NikeLab Air Zoom LWP x Kim Jones.", "Atmos x Nike Air Max 1 Safari.",
+    "NikeLab Air Rift Wrap", "Nike Air Yeezy", "Nike Total 90");
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,13 +15,15 @@
         CS313 Home Page - Harry Vashisht
     </title>
     <link rel="stylesheet" type="text/css" href="../../styles/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <?php
 include '../../nav.php';
 ?>
 <h1>
-    Harry Vashisht's Home Page.
+    Checkout Page
 </h1>
 </body>
 </html>

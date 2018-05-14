@@ -110,17 +110,14 @@ if ( isset($_SESSION["cart"]) ) {
 
 
 
-
-
-
-
-
     <?php
 }
 ?>
 
 <button><a href="browse.php">Add more items</a></button>
-<button><a href=checkout.php">Proceed to Checkout</a></button>
+<button><a href="checkout.php">Proceed to Checkout</a></button>
+
+
 
 </body>
 </html>
