@@ -27,7 +27,7 @@ include '../../nav.php';
 </h1>
 
 <form method="post">
-    <labal for="address"></labal>
+    <labal for="address">Enter Your Address: </labal>
     <textarea name="address" cols="50" maxlength="100">
 
     </textarea>
