@@ -17,8 +17,6 @@ if ( isset($_GET["add"]) )
     $_SESSION["qty"][$i] = $qty;
 }
 
-
-
 ?>
 
 <!DOCTYPE html>

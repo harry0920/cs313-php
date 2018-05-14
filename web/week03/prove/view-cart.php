@@ -54,9 +54,11 @@ if ( isset($_GET["delete"]) )
     </title>
     <link rel="stylesheet" type="text/css" href="../../styles/style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
-<body>
+<body style="background-color:whitesmoke;">
 <?php
 include '../../nav.php';
 ?>
