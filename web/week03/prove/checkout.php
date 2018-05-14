@@ -34,6 +34,6 @@ include '../../nav.php';
     <button type="submit"><a href="confirm.php">Confirm Purchase</a></button>
 
 </form>
-<button><a href="checkout.php">Return to Checkout</a></button>
+<button><a href="view-cart.php">Return to cart</a></button>
 </body>
 </html>
