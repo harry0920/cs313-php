@@ -9,6 +9,10 @@ $names = array("Nike Lunar Epic Flyknit", "Nike SB Koston Hyperfeel 3.", "NikeLa
 
 
 $line1 = $_POST['line1'];
+//$line2 = $_POST['line2'];
+$state = $_POST['state'];
+$code = $_POST['code'];
+
 
 
 
@@ -31,8 +35,9 @@ include '../../nav.php';
     Confirmation Page
 </h1>
 
-<p><?php echo $address;?> </p>
-
+<p><?php echo $line1;?> </p>
+<p><?php echo $state;?> </p>
+<p><?php echo $code;?> </p>
 
 </body>
 </html>
