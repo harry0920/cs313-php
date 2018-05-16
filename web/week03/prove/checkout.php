@@ -33,7 +33,7 @@ include '../../nav.php';
     <span class="help-text"></span>
 
     <labal for="line2">Line 2 (Optional): </labal>
-    <input name="linew" type="text"  maxlength="50">
+    <input name="line2" type="text"  maxlength="50">
     <span class="help-text"></span>
 
     <labal for="state">State Code: </labal>
