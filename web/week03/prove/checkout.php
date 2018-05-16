@@ -26,9 +26,23 @@ include '../../nav.php';
     Checkout Page
 </h1>
 
-<form method="post">
-    <labal for="address">Enter Your Address: </labal>
-    <textarea name="address" cols="50" maxlength="100">
+<form class="address" method="post">
+
+    <labal for="line1">Enter Your Address: </labal>
+    <input type="text" required maxlength="50">
+    <span class="help-text"></span>
+
+    <labal for="line2">Line 2 (Optional): </labal>
+    <input type="text"  maxlength="50">
+    <span class="help-text"></span>
+
+    <labal for="state">State Code: </labal>
+    <input type="text" required maxlength="2">
+    <span class="help-text"></span>
+
+    <labal for="code">Postal Code: </labal>
+    <input type="text" required maxlength="5">
+    <span class="help-text"></span>
 
     </textarea>
     <button type="submit"><a href="confirm.php">Confirm Purchase</a></button>
