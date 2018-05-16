@@ -12,6 +12,11 @@ $line1 = $_POST['line1'];
 //$line2 = $_POST['line2'];
 $state = $_POST['state'];
 $code = $_POST['code'];
+$line2 = "";
+
+if(isset($_POST['line2'])){
+    $line2 = $_POST['line2'];
+}
 
 
 
@@ -35,9 +40,7 @@ include '../../nav.php';
     Confirmation Page
 </h1>
 
-<p><?php echo $line1;?> </p>
-<p><?php echo $state;?> </p>
-<p><?php echo $code;?> </p>
+<p>Product(s) Shipped to: <?php echo $line1." ".$line2.",".$state.",".$code;?> </p>
 
 </body>
 </html>
