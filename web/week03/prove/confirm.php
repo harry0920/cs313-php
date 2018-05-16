@@ -8,16 +8,16 @@ $names = array("Nike Lunar Epic Flyknit", "Nike SB Koston Hyperfeel 3.", "NikeLa
     "NikeLab Air Rift Wrap", "Nike Air Yeezy", "Nike Total 90");
 
 
-$line1 = $_POST['line1'];
-//$line2 = $_POST['line2'];
-$state = $_POST['state'];
-$code = $_POST['code'];
-$line2 = "";
+if ( isset( $_POST['submit'] ) ) {
+    $line1 = filter_input(INPUT_POST, 'line1');
+    $state = filter_input(INPUT_POST, 'state');
+    $code = filter_input(INPUT_POST, 'code');
+    $line2 = "";
 
-if(isset($_POST['line2'])){
-    $line2 = $_POST['line2'];
+    if (isset($_POST['line2'])) {
+        $line2 = filter_input(INPUT_POST, 'line2');
+    }
 }
-
 
 
 

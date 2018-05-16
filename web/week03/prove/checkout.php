@@ -45,7 +45,7 @@ include '../../nav.php';
     <span class="help-text"></span>
 
     </textarea>
-    <button type="submit">Confirm Purchase</></button>
+    <button name="submit" type="submit">Confirm Purchase</></button>
 
 </form>
 <button><a href="view-cart.php">Return to cart</a></button>
