@@ -8,9 +8,7 @@ $names = array("Nike Lunar Epic Flyknit", "Nike SB Koston Hyperfeel 3.", "NikeLa
     "NikeLab Air Rift Wrap", "Nike Air Yeezy", "Nike Total 90");
 
 
-$address = $_POST['address'];
-
-
+$line1 = $_POST['line1'];
 
 
 

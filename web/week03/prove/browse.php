@@ -7,22 +7,6 @@ $names = array("Nike Lunar Epic Flyknit", "Nike SB Koston Hyperfeel 3.", "NikeLa
     "Skate Mental x Nike SB Janoski Pepperoni Pizza", "NikeLab Air Zoom LWP x Kim Jones.", "Atmos x Nike Air Max 1 Safari.",
     "NikeLab Air Rift Wrap", "Nike Air Yeezy", "Nike Total 90");
 
-for ($i=0; $i< count($products); $i++)
-{
-
-    if(!isset($_SESSION["amounts"][$i]))
-    {
-        $_SESSION["amounts"][$i] = 0;
-    }
-    if(!isset($_SESSION["cart"][$i]))
-    {
-        $_SESSION["cart"][$i] = 0;
-    }
-    if(!isset($_SESSION["qty"][$i]))
-    {
-        $_SESSION["qty"][$i] = 0;
-    }
-}
 //Add
 if ( isset($_GET["add"]) )
 {

@@ -26,26 +26,26 @@ include '../../nav.php';
     Checkout Page
 </h1>
 
-<form class="address" method="post">
+<form class="address" method="post" action="confirm.php">
 
     <labal for="line1">Enter Your Address: </labal>
-    <input type="text" required maxlength="50">
+    <input name="line1" type="text" required maxlength="50">
     <span class="help-text"></span>
 
     <labal for="line2">Line 2 (Optional): </labal>
-    <input type="text"  maxlength="50">
+    <input name="linew" type="text"  maxlength="50">
     <span class="help-text"></span>
 
     <labal for="state">State Code: </labal>
-    <input type="text" required maxlength="2">
+    <input type="text" name="state" required maxlength="2">
     <span class="help-text"></span>
 
     <labal for="code">Postal Code: </labal>
-    <input type="text" required maxlength="5">
+    <input type="text" name="code" required maxlength="5">
     <span class="help-text"></span>
 
     </textarea>
-    <button type="submit"><a href="confirm.php">Confirm Purchase</a></button>
+    <button type="submit">Confirm Purchase</></button>
 
 </form>
 <button><a href="view-cart.php">Return to cart</a></button>
