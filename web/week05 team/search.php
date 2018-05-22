@@ -30,9 +30,9 @@
 
       $stmt->execute();
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    //  $stmt->closeCursor();
+      $stmt->closeCursor();
 
-      echo $rows;
+      var_dump($rows);
 
       foreach ($rows as $row)
       {
