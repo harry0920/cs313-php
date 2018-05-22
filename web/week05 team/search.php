@@ -32,6 +32,7 @@
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
       $stmt->closeCursor();
 
+      echo $rows;
 
       foreach ($rows as $row)
       {
