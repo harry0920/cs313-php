@@ -24,9 +24,9 @@
 
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-      $sql = 'SELECT * FROM scriptures where book = \'John\'';
+      $sql = 'SELECT * FROM scriptures where book = :book';
       $stmt = $db->prepare($sql);
-      //$stmt->bindValue(':book', $book, PDO::PARAM_STR);
+      $stmt->bindValue(':book', $book, PDO::PARAM_STR);
 
       $stmt->execute();
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
