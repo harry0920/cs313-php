@@ -19,6 +19,8 @@
       $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+      //$sql =
       foreach ($db->query('SELECT * FROM scriptures') as $row)
       {
         echo "<b>".$row['book']." ".$row['chapter'].":".$row['verse']." - </b>"."\"".$row['content'].".\"";
@@ -26,12 +28,5 @@
       }
 
        ?>
-
-
-   <form action="search.php" method="post">
-        <input type="text" max="30" name="book">
-        <input type="submit" text="Search">
-   </form>
-
    </body>
 </html>
