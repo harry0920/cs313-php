@@ -17,11 +17,14 @@
       $dbName = ltrim($dbopts["path"],'/');
 
       $book = $_POST['book'];
+
+      echo $book;
+
       $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-      $sql = 'SELECT * FROM scriptures where book = :book';
+      $sql = 'SELECT * FROM scriptures where book = \'John\'';
       $stmt = $db->prepare($sql);
       $stmt->bindValue(':book', $book, PDO::PARAM_STR);
 
