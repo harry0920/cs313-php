@@ -30,7 +30,7 @@
 
       $stmt->execute();
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-      $stmt->closeCursor();
+    //  $stmt->closeCursor();
 
       echo $rows;
 
