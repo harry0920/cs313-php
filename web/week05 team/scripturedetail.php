@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
    <head>
-       <title>First page</title>
+       <title>Scripture Detail</title>
    </head>
    <body>
-   <h1>Scripture Resources</h1>
+   <h1>Scripture Detail</h1>
       <?php
       $dbUrl = getenv('DATABASE_URL');
 
@@ -16,17 +16,32 @@
       $dbPassword = $dbopts["pass"];
       $dbName = ltrim($dbopts["path"],'/');
 
+      $id = $_GET['id'];
+
+      //echo $book;
+
       $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-      //$sql =
-      foreach ($db->query('SELECT * FROM scriptures') as $row)
+      $sql = 'SELECT * FROM scriptures where id = :id';
+      $stmt = $db->prepare($sql);
+      $stmt->bindValue(':book', $book, PDO::PARAM_STR);
+
+      $stmt->execute();
+      $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      $stmt->closeCursor();
+
+      //echo 'after the databse query';
+      // var_dump($rows);
+
+      foreach ($rows as $row)
       {
-        echo "<b>".$row['book']." ".$row['chapter'].":".$row['verse']." - </b>"."\"".$row['content'].".\"";
-        echo '<br/>';
+          echo "<b>".$row['book']." ".$row['chapter'].":".$row['verse']."</b>"."\"".$row['content'].".\"";
+          echo '<br/>';
       }
 
-       ?>
+
+      ?>
    </body>
 </html>

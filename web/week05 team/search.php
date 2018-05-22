@@ -18,7 +18,7 @@
 
       $book = $_POST['book'];
 
-      echo $book;
+      //echo $book;
 
       $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
@@ -38,7 +38,7 @@
       foreach ($rows as $row)
       {
           echo "<a href=\"scripturedetail.php?id=".$row[id]."\">";
-          echo "<b>".$row['book']." ".$row['chapter'].":".$row['verse']." - </b>"."\"".$row['content'].".\"";
+          echo "<b>".$row['book']." ".$row['chapter'].":".$row['verse']."</b>";
           echo '</a>';
           echo '<br/>';
       }
