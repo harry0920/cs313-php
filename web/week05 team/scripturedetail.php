@@ -26,7 +26,7 @@
 
       $sql = 'SELECT * FROM scriptures where id = :id';
       $stmt = $db->prepare($sql);
-      $stmt->bindValue(':book', $book, PDO::PARAM_STR);
+      $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 
       $stmt->execute();
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
