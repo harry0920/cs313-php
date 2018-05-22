@@ -29,11 +29,11 @@
       $stmt->bindValue(':book', $book, PDO::PARAM_STR);
 
       $stmt->execute();
-      $rowsChanged = $stmt->rowCount();
+      $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
       $stmt->closeCursor();
 
 
-      foreach ($rowsChanged as $row)
+      foreach ($rows as $row)
       {
         echo "<b>".$row['book']." ".$row['chapter'].":".$row['verse']." - </b>"."\"".$row['content'].".\"";
         echo '<br/>';
