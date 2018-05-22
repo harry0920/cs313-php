@@ -32,13 +32,15 @@
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
       $stmt->closeCursor();
 
-      echo 'after the databse query';
-      var_dump($rows);
+      //echo 'after the databse query';
+      // var_dump($rows);
 
       foreach ($rows as $row)
       {
-        echo "<b>".$row['book']." ".$row['chapter'].":".$row['verse']." - </b>"."\"".$row['content'].".\"";
-        echo '<br/>';
+          echo "<a href=\"scripturedetail.php?id=".$row[id]."\">";
+          echo "<b>".$row['book']." ".$row['chapter'].":".$row['verse']." - </b>"."\"".$row['content'].".\"";
+          echo '</a>';
+          echo '<br/>';
       }
 
        ?>
