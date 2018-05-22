@@ -26,12 +26,13 @@
 
       $sql = 'SELECT * FROM scriptures where book = \'John\'';
       $stmt = $db->prepare($sql);
-      $stmt->bindValue(':book', $book, PDO::PARAM_STR);
+      //$stmt->bindValue(':book', $book, PDO::PARAM_STR);
 
       $stmt->execute();
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
       $stmt->closeCursor();
 
+      echo 'after the databse query';
       var_dump($rows);
 
       foreach ($rows as $row)
