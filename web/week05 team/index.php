@@ -21,7 +21,7 @@
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       foreach ($db->query('SELECT * FROM scriptures') as $row)
       {
-        echo "<b>".$row['book']." ".$row['chapter'].":".$row['verse']." - </b>"."\"".$row['content']."\"";
+        echo "<b>".$row['book']." ".$row['chapter'].":".$row['verse']." - </b>"."\"".$row['content'].".\"";
         echo '<br/>';
       }
 
