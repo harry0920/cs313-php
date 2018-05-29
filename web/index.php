@@ -11,7 +11,9 @@
         include 'nav.php';
         ?>
         <h1>
-            Harry Vashisht's Home Page.
+            Harry Vashisht's Home Page....
+            
+        
         </h1>
     </body>
 </html>
