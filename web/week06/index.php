@@ -21,7 +21,7 @@
 
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-      $sql = 'SELECT * FROM scripture where book = :book';
+      $sql = 'SELECT * FROM scriptures where book = :book';
       $stmt = $db->prepare($sql);
       $stmt->bindValue(':book', $book, PDO::PARAM_STR);
 
