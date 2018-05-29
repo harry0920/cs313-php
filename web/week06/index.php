@@ -6,19 +6,6 @@
    <body>
    <h1>Scripture Results</h1>
       <?php
-
-      if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-          // The request is using the POST method
-
-          $book = $_POST['book'];
-          $chapter = $_POST['chapter'];
-          $verse = $_POST['verse'];
-          $content = $_POST['content'];
-
-          echo $book.$chapter.$verse.$content;
-
-
-      }
       $dbUrl = getenv('DATABASE_URL');
 
       $dbopts = parse_url($dbUrl);
@@ -34,12 +21,44 @@
 
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-      $sql = 'SELECT * FROM scriptures where book = :book';
+      if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+          // The request is using the POST method
+
+          $book = $_POST['book'];
+          $chapter = $_POST['chapter'];
+          $verse = $_POST['verse'];
+          $content = $_POST['content'];
+
+         // echo $book.$chapter.$verse.$content;
+
+          $sql =  "INSERT INTO scriptures (book,chapter, verse,content) VALUES (:book, :chapter, :verse,:content)";
+          $stmt = $db->prepare($sql);
+          $stmt->bindValue(':book', $book, PDO::PARAM_STR);
+          $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
+          $stmt->bindValue(':book', $verse, PDO::PARAM_INT);
+          $stmt->bindValue(':book', $content, PDO::PARAM_STR);
+
+          $stmt->execute();
+          $rowsChanged = $stmt->rowCount();
+          $stmt->closeCursor();
+
+
+          if($rowsChanged > 0)
+          {
+           echo 'Rows Inserted';
+          }
+
+
+
+      }
+
+
+      $sql = 'SELECT * FROM scriptures';
       $stmt = $db->prepare($sql);
-      $stmt->bindValue(':book', $book, PDO::PARAM_STR);
+     // $stmt->bindValue(':book', $book, PDO::PARAM_STR);
 
       $stmt->execute();
-      $rowsChanged = $stmt->rowCount();
+      $rowsChanged = $stmt->fetchAll(PDO::FETCH_ASSOC);
       $stmt->closeCursor();
 
 
