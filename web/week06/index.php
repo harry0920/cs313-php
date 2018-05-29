@@ -46,6 +46,8 @@
          <input type="text" name="verse"><br>
          Content:<br>
          <textarea type="text" name="content"></textarea><br>
+
+           <input type="submit" Value="Submit">
        </form>
    </body>
 </html>
