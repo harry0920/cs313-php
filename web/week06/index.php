@@ -6,6 +6,19 @@
    <body>
    <h1>Scripture Results</h1>
       <?php
+
+      if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+          // The request is using the POST method
+
+          $book = $_POST['book'];
+          $chapter = $_POST['chapter'];
+          $verse = $_POST['verse'];
+          $content = $_POST['content'];
+
+          echo $book.$chapter.$verse.$content;
+
+
+      }
       $dbUrl = getenv('DATABASE_URL');
 
       $dbopts = parse_url($dbUrl);
