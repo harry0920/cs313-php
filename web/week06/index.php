@@ -29,9 +29,9 @@
           $verse = $_POST['verse'];
           $content = $_POST['content'];
 
-         // echo $book.$chapter.$verse.$content;
+          echo $book.$chapter.$verse.$content;
 
-          $sql =  "INSERT INTO scriptures (book,chapter, verse,content) VALUES (:book, :chapter, :verse,:content)";
+          $sql =  "INSERT INTO scriptures (book,chapter,verse,content) VALUES (:book, :chapter, :verse,:content)";
           $stmt = $db->prepare($sql);
           $stmt->bindValue(':book', $book, PDO::PARAM_STR);
           $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
@@ -45,7 +45,10 @@
 
           if($rowsChanged > 0)
           {
-           echo 'Rows Inserted';
+            echo 'Rows Inserted';
+          }
+          else{
+              echo "Something Went wrong";
           }
 
 
