@@ -18,7 +18,7 @@
                 <li><a href="#">Assignment2</a></li>
                  <li><a href="week03/prove/browse.php">Assignment3</a></li>
                  <li><a href="#">Assignment4</a></li>
-                 <li><a href="#">Assignment5</a></li>
+                 <li><a href="week05/prove/index.php">Assignment5</a></li>
             </ul>
         </li>
         <li><a href="contact.php">Contact</a></li>
