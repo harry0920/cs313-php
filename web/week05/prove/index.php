@@ -36,7 +36,7 @@ session_start();
               $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
               foreach ($db->query('SELECT * FROM inventory') as $row)
               {
-                echo "<b>".$row['name'].:".$row['stock']";
+                echo "<b>".$row['name'].":".$row['stock'];
                 echo '<br/>';
               }
 
