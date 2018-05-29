@@ -29,20 +29,19 @@
           $verse = $_POST['verse'];
           $content = $_POST['content'];
 
-          echo $book.$chapter.$verse.$content;
+       //   echo $book.$chapter.$verse.$content;
 
           $sql =  'INSERT INTO scriptures (book,chapter,verse,content) VALUES (:book, :chapter, :verse,:content)';
 
-          echo 'After sql';
+
 
           $stmt = $db->prepare($sql);
-          echo 'After prepare';
+
           $stmt->bindValue(':book', $book, PDO::PARAM_STR);
           $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
-          $stmt->bindValue(':book', $verse, PDO::PARAM_INT);
-          $stmt->bindValue(':book', $content, PDO::PARAM_STR);
+          $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
+          $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 
-          echo 'After bind';
 
           $stmt->execute();
 
