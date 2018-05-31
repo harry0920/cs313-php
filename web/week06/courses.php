@@ -27,7 +27,7 @@
        <?php
             foreach ($courses as $course)
             {
-                $name = $cours["name"];
+                $name = $course["name"];
                 $number = $course["number"];
 
                 echo"<li>$number - $name</li>";
