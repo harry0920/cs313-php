@@ -45,12 +45,12 @@
 
           $stmt->execute();
 
-          echo 'After Execute';
+
           $rowsChanged = $stmt->rowCount();
           $stmt->closeCursor();
 
-          echo 'After closing';
 
+          /*
           if($rowsChanged > 0)
           {
             echo 'Rows Inserted';
@@ -59,7 +59,7 @@
               echo "Something Went wrong";
           }
 
-
+          */
 
       }
 
