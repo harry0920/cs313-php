@@ -12,7 +12,7 @@
 function addCateogry($categoryName) {
 
     $db = shoesDB();
-    $sql = 'INSERT INTO categories(categoryName)
+    $sql = 'INSERT INTO categories(name)
             VALUES (:categoryName)';
 
     $stmt = $db->prepare($sql);
@@ -36,8 +36,7 @@ function addProduct($invName, $invDescription, $invImage, $invThumbnail,  $categ
     $db = shoesDB();
 
 
-    $sql = 'INSERT INTO inventory (name, description, image, thumbnail
-            ,price,stock,categoryId) 
+    $sql = 'INSERT INTO inventory (name, description, image, thumbnail,price,stock,categoryId) 
             VALUES (:invName, :invDescription, :invImage, :invThumbnail,
             :invPrice, :invStock, :invSize, :categoryId)';
 
@@ -69,11 +68,11 @@ function updateProduct($prodName, $prodDesc, $prodImg, $prodThumb, $catType, $pr
 // Create a connection
     $db = shoesDB();
 // The SQL statement to be used with the database
-    $sql = 'UPDATE inventory SET invName = :prodName, invDescription = :prodDesc, '
-            . 'invImage = :prodImg, invThumbnail = :prodThumb, '
-            . 'invPrice = :prodPrice, invStock = :prodStock, '
+    $sql = 'UPDATE inventory SET name = :prodName, description = :prodDesc, '
+            . 'image = :prodImg, thumbnail = :prodThumb, '
+            . 'price = :prodPrice, stock = :prodStock, '
             . 'categoryId = :catType,'
-            . 'WHERE invId = :prodId';
+            . 'WHERE id = :prodId';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':catType', $catType, PDO::PARAM_INT);
     $stmt->bindValue(':prodName', $prodName, PDO::PARAM_STR);
@@ -181,7 +180,7 @@ function buildThumbnailDisplay($products) {
         $pd .= '<li>';
         $pd .= "<a href='/shoes/products/index.php?";
         $pd .= "action=prod-detail&productId=$product[inventoryId]'>";
-        $pd .= "<img src='$product[path]' alt='Image of $product[name] on Shoes.com'>";
+        $pd .= "<img src='$product[image]' alt='Image of $product[name] on Shoes.com'>";
         $pd .= '<hr>';
         $pd .= '</a>';
         $pd .= '</li>';
@@ -195,7 +194,7 @@ function buildThumbnailDisplay($products) {
 
 function getProductById($id) {
     $db = shoesDB();
-    $sql = 'SELECT * FROM inventory WHERE invId = :catId';
+    $sql = 'SELECT * FROM inventory WHERE id = :catId';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':catId', $id, PDO::PARAM_STR);
     $stmt->execute();
