@@ -233,13 +233,20 @@ switch ($action) {
         $productDetail = getProductById($productId);
         
         $productThumbnail = getThumbnailImages($productId);
+        echo 'Product Detail\n';
+        var_dump($productDetail);
+        echo 'Product Thumbnail';
+        var_dump($productThumbnail);
+
+
+        /**
         
         if($_SESSION['loggedin'])
         {
-            $screenName = $_SESSION['clientData']['clientFirstname'][0].
-                $_SESSION['clientData']['clientLastname'];
+            $screenName = $_SESSION['clientData']['firstName'][0].
+                $_SESSION['clientData']['lastName'];
             
-            $reviewForm = buildReviewForm($screenName, $_SESSION['clientData']['clientId']
+            $reviewForm = buildReviewForm($screenName, $_SESSION['clientData']['id']
                     ,$productId);
     
         }
@@ -264,4 +271,6 @@ switch ($action) {
 
         include '../view/product-detail.php';
         break;
+         *
+         * **/
 }
