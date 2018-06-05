@@ -35,7 +35,9 @@
                 Welcome to shoes!
             </h2>
 
-            <div id="cart">
+
+
+            <!--<div id="cart">
                         <ul>
                             <li><h2>Get Dinner Rocket</h2></li>
                             <li>Quick lighting fuse</li>
@@ -98,7 +100,7 @@
                 <div class="CR">
                     Last Updated: 3 January, 2017
                 </div>
-            </footer>
+            </footer>-->
         </main>
     </body>
 </html>
