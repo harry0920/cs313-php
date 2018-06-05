@@ -48,9 +48,9 @@ function navigation($categories) {
 
         $navList .= "<li>"
                 . "<a href='/shoes/products/index.php?"
-                . "action=category&type=$category[categoryName]' "
-                . "title='View our $category[categoryName] "
-                . "product line'>$category[categoryName]</a>"
+                . "action=category&type=$category[categoryname]' "
+                . "title='View our $category[categoryname] "
+                . "product line'>$category[categoryname]</a>"
                 . "</li>";
     }
     $navList .= '</ul>';
@@ -83,15 +83,11 @@ function buildProductDetail($productDetails) {
     foreach ($productDetails as $productDetail) {
         $pd = "<ul id='prod-detail'>";
         $pd .= "<li>";
-        $pd .= "<img src='$productDetail[invImage]' alt='Image of $productDetail[invName] on shoes.com'>";
-        $pd .= "<h2>$productDetail[invName]</h2>";
-        $pd .= "<P>Price: $productDetail[invPrice]</P>";
-        $pd .= "<P>Description: $productDetail[invDescription]</P>";
-        $pd .= "<P>Stock: $productDetail[invStock]</P>";
-        $pd .= "<P>Size: $productDetail[invSize]</P>";
-        $pd .= "<P>Location: $productDetail[invLocation]</P>";
-        $pd .= "<P>Vendor: $productDetail[invVendor]</P>";
-        $pd .= "<P>Style: $productDetail[invStyle]</P>";
+        $pd .= "<img src='$productDetail[image]' alt='Image of $productDetail[name] on shoes.com'>";
+        $pd .= "<h2>$productDetail[name]</h2>";
+        $pd .= "<P>Price: $productDetail[price]</P>";
+        $pd .= "<P>Description: $productDetail[description]</P>";
+        $pd .= "<P>Stock: $productDetail[stock]</P>";
         $pd .= "</li>";
         $pd .= "</ul>";
     }
@@ -130,7 +126,7 @@ function buildProductsSelect($products) {
     $prodList = '<select name="invItem" id="invItem">';
     $prodList .= "<option>Choose a Product</option>";
     foreach ($products as $product) {
-        $prodList .= "<option value='$product[invId]'>$product[invName]</option>";
+        $prodList .= "<option value='$product[id]'>$product[name]</option>";
     }
     $prodList .= '</select>';
     return $prodList;
@@ -292,7 +288,7 @@ function buildReviewForm($screenName, $clientId, $prodId)
  ************************************* */
 function getClientInformation($clientId) {
     $db = shoesDB();
-    $sql = 'SELECT * FROM clients WHERE clientId = :cliId';
+    $sql = 'SELECT * FROM clients WHERE id = :cliId';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':cliId', $clientId, PDO::PARAM_INT);
     $stmt->execute();
@@ -313,13 +309,13 @@ function buildCustomerReviews($reviews)
     foreach ($reviews as $review)
     {
         
-        $clientInfo = getClientInformation($review['clientId']);
+        $clientInfo = getClientInformation($review['clientid']);
         
         $customerReviews .= "<li>";
-        $customerReviews .= "<label><strong>".$clientInfo['clientFirstName'][0].$clientInfo['clientLastName']."</strong>"
-                ." wrote on ".$review['reviewDate'].": </label>";
+        $customerReviews .= "<label><strong>".$clientInfo['firstname'][0].$clientInfo['lastname']."</strong>"
+                ." wrote on ".$review["date"].": </label>";
         
-        $customerReviews .= $review['reviewText'];
+        $customerReviews .= $review["text"];
         $customerReviews .= "</li>";
        
     }
