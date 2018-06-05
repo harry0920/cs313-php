@@ -140,7 +140,7 @@ function deleteProduct($prodId) {
 
 function getProductsByCategory($type) {
     $db = shoesDB();
-    $sql = 'SELECT * FROM inventory WHERE categoryId IN (SELECT id FROM categories WHERE categoryName = :catType)';
+    $sql = 'SELECT * FROM inventory WHERE categoryid IN (SELECT id FROM categories WHERE categoryName = :catType)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':catType', $type, PDO::PARAM_STR);
     $stmt->execute();
@@ -159,7 +159,7 @@ function buildProductsDisplay($products) {
         $pd .= '<li>';
         $pd .= "<a href='/shoes/products/index.php?";
         $pd .= "action=prod-detail&productId=$product[id]'>";
-        $pd .= "<img src='$product[thumbnail]' alt='Image of $product[name] on Shoes.com'>";
+        $pd .= "<img src='$product[image]' alt='Image of $product[name] on Shoes.com'>";
         $pd .= '<hr>';
         $pd .= "<h2>$product[name]</h2>";
         $pd .= "<span>$$product[price]</span>";
@@ -180,8 +180,8 @@ function buildThumbnailDisplay($products) {
     foreach ($products as $product) {
         $pd .= '<li>';
         $pd .= "<a href='/shoes/products/index.php?";
-        $pd .= "action=prod-detail&productId=$product[invId]'>";
-        $pd .= "<img src='$product[imgPath]' alt='Image of $product[imgName] on Shoes.com'>";
+        $pd .= "action=prod-detail&productId=$product[inventoryId]'>";
+        $pd .= "<img src='$product[path]' alt='Image of $product[name] on Shoes.com'>";
         $pd .= '<hr>';
         $pd .= '</a>';
         $pd .= '</li>';
