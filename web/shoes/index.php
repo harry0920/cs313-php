@@ -14,7 +14,9 @@ require_once 'library/functions.php';
 // Get the array of categories
 $categories = getCategories();
 
+var_dump($categories);
 
+/**
 $navList = navigation($categories);
 
 
@@ -47,6 +49,7 @@ switch ($action) {
 //        break;
    
 }
-          
+
+ ***/
 
           
