@@ -14,11 +14,13 @@ require_once 'library/functions.php';
 // Get the array of categories
 $categories = getCategories();
 
-var_dump($categories);
+//var_dump($categories);
+
+
+$navList = navigation($categories);
+var_dump($navList);
 
 /**
-$navList = navigation($categories);
-
 
 $accountStatus = getLoginStatus();
 
