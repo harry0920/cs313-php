@@ -237,12 +237,10 @@ switch ($action) {
 
         var_dump($productDetail);
 
-/**
-        $productThumbnail = getThumbnailImages($productId);
-       // echo 'Product Detail\n';
-        var_dump($productDetail);
-        echo 'Product Thumbnail';
-        var_dump($productThumbnail);
+
+  //   $productThumbnail = getThumbnailImages($productId);
+
+
 
 
 
@@ -266,13 +264,15 @@ switch ($action) {
              $productDetailDisplay = buildProductDetail($productDetail);
         }
         
-        
+     /***
          if (!count($productThumbnail)) {
             //$message = "<p class='notice'>Sorry, Product thumbnail not avai exist.</p>";
         } else {
              $productThumbnailDisplay = buildThumbnailDisplay($productThumbnail);
         }
-        
+
+      *
+      ***/
 
         include '../view/product-detail.php';
         break;
