@@ -230,13 +230,16 @@ switch ($action) {
     case 'prod-detail':
 
         echo 'Product-Detail';
-        /**
+
         $productId = filter_input(INPUT_GET, 'productId', FILTER_SANITIZE_NUMBER_INT);
         
         $productDetail = getProductById($productId);
-        
+
+        var_dump($productDetail);
+
+/**
         $productThumbnail = getThumbnailImages($productId);
-        echo 'Product Detail\n';
+       // echo 'Product Detail\n';
         var_dump($productDetail);
         echo 'Product Thumbnail';
         var_dump($productThumbnail);
