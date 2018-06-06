@@ -228,6 +228,9 @@ switch ($action) {
         
         
     case 'prod-detail':
+
+        echo 'Product-Detail';
+        /**
         $productId = filter_input(INPUT_GET, 'productId', FILTER_SANITIZE_NUMBER_INT);
         
         $productDetail = getProductById($productId);
@@ -239,8 +242,7 @@ switch ($action) {
         var_dump($productThumbnail);
 
 
-        /**
-        
+
         if($_SESSION['loggedin'])
         {
             $screenName = $_SESSION['clientData']['firstName'][0].
