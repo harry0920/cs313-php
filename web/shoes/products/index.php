@@ -241,7 +241,7 @@ switch ($action) {
   //   $productThumbnail = getThumbnailImages($productId);
 
 
-
+/**
 
 
         if($_SESSION['loggedin'])
@@ -254,6 +254,8 @@ switch ($action) {
     
         }
 
+ *
+ * **/
        $customerReviews = getReviewsByInvId($productId);  
        $customerReviews = buildCustomerReviews($customerReviews);
         
@@ -272,10 +274,10 @@ switch ($action) {
         }
 
       *
-      ***/
+
 
         include '../view/product-detail.php';
         break;
-         *
-         * **/
+      *
+      * **/
 }
