@@ -20,7 +20,7 @@ function addReview($text, $invId, $clientId) {
     $stmt->execute();
 
     $rowsChanged = $stmt->rowCount();
-    $stmt->closeCursor();i
+    $stmt->closeCursor();
     return $rowsChanged;
 }
 

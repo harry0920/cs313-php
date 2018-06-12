@@ -7,9 +7,7 @@
 function regVisitor($firstname, $lastname, $email, $password) {
 
     $db = shoesDB();
-    $sql = 'INSERT INTO clients(firstName, lastName, 
-            email, password) 
-            VALUES (:firstname, :lastname, :email, :password)';
+    $sql = 'INSERT INTO clients(firstName, lastName, email, password) VALUES (:firstname, :lastname, :email, :password)';
 
     $stmt = $db->prepare($sql);
 

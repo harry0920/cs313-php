@@ -12,8 +12,7 @@
 function addCateogry($categoryName) {
 
     $db = shoesDB();
-    $sql = 'INSERT INTO categories(categoryname)
-            VALUES (:categoryName)';
+    $sql = 'INSERT INTO categories(categoryname) VALUES (:categoryName)';
 
     $stmt = $db->prepare($sql);
 
@@ -37,8 +36,7 @@ function addProduct($invName, $invDescription, $invImage, $invThumbnail,  $categ
 
 
     $sql = 'INSERT INTO inventory (name, description, image, thumbnail,price,stock,categoryId) 
-            VALUES (:invName, :invDescription, :invImage, :invThumbnail,
-            :invPrice, :invStock, :categoryId)';
+            VALUES (:invName, :invDescription, :invImage, :invThumbnail, :invPrice, :invStock, :categoryId)';
 
     $stmt = $db->prepare($sql);
 

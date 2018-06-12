@@ -25,6 +25,10 @@ $categories = getCategories();
 
 $navList = navigation($categories);
 
+var_dump($navList);
+
+
+/***
 $accountStatus = getLoginStatus();
 
 
@@ -263,5 +267,5 @@ switch ($action) {
         break;
 }
          
-
+**/
           
