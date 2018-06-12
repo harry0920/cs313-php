@@ -37,7 +37,7 @@
                  <li><a href="~/week03/prove/browse.php">Assignment3</a></li>
                  <li><a href="#">Assignment4</a></li>
                  <li><a href="~/week05/prove/index.php">Assignment5</a></li>
-                 <li><a href="~/shoes/">SHOES</a></li>
+                 <li><a href="/shoes/">SHOES</a></li>
                 
             </ul>
         </li>
