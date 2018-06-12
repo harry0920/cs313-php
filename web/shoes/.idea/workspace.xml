@@ -107,9 +107,10 @@
       <change beforePath="$PROJECT_DIR$/../acme/view/registration.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../acme/view/review-delete.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../acme/view/review-update.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/view/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/view/.idea/view.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/view/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/catapult-tn-tn.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/catapult-tn.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/imgres-tn.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/uploads/images/imgres.jpg" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -174,11 +175,6 @@
               <item name="shoes" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="accounts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="shoes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shoes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -215,12 +211,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528792961118</updated>
-      <workItem from="1528792962269" duration="326000" />
+      <workItem from="1528792962269" duration="363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326000" />
+    <option name="totallyTimeSpent" value="363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
