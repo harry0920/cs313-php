@@ -25,11 +25,11 @@ $categories = getCategories();
 
 $navList = navigation($categories);
 
-var_dump($navList);
-
-
-/***
 $accountStatus = getLoginStatus();
+
+var_dump($accountStatus);
+
+/**
 
 
 $action = filter_input(INPUT_POST, 'action');
