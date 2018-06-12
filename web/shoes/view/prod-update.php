@@ -20,7 +20,7 @@ foreach ($categories as $category) {
    $catList .= ' selected ';
   }
 }
-$catList .= ">$category[name]</option>";
+$catList .= ">$category[categoryname]</option>";
 }
 $catList .= '</select>';
 

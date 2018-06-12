@@ -193,6 +193,11 @@ switch ($action) {
         $prodName = filter_input(INPUT_POST, 'prodName', FILTER_SANITIZE_STRING);
         $prodId = filter_input(INPUT_POST, 'prodId', FILTER_SANITIZE_NUMBER_INT);
 
+        echo $productName;
+        echo $prodId;
+
+        /**
+
         $deleteResult = deleteProduct($prodId);
         if ($deleteResult) {
             $message = "<p class='notice'>Congratulations, $prodName was successfully deleted.</p>";
@@ -205,6 +210,8 @@ switch ($action) {
             header('location: /shoes/products/');
             exit;
         }
+         *
+         * **/
         break;
 
     case 'category':
