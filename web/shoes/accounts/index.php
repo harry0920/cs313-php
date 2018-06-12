@@ -112,7 +112,7 @@ switch ($action) {
             exit;
         }
 
-        $hashCheck = password_verify($password, $clientData['clientPassword']);
+        $hashCheck = password_verify($password, $clientData['password']);
 
         if (!$hashCheck) {
             $message = '<p class="notice">Please check your password and try again.</p>';
@@ -163,7 +163,7 @@ switch ($action) {
 
         $clientId = filter_input(INPUT_POST, 'clientId', FILTER_SANITIZE_NUMBER_INT);
 
-        if ($email != $_SESSION['clientData']['clientEmail']) {
+        if ($email != $_SESSION['clientData']['email']) {
             $existingEmail = checkExistingEmail($email);
 
             // Check for existing email address in the table
@@ -233,7 +233,7 @@ switch ($action) {
     case 'loggedIn':
         $clientData = $_SESSION['clientData'];
          
-        $clientReviews = getReviewsByClientId($clientData['clientId']);
+        $clientReviews = getReviewsByClientId($clientData['id']);
         //$clientReviews = buildManageReviews($clientReviews);
 
 
@@ -245,13 +245,13 @@ switch ($action) {
 
                 $clientReviewsTable .= "<li>";
                 
-                $productInfo = getProductInfo($review['invId']);
+                $productInfo = getProductInfo($review['inventoryId']);
                 
-                $clientReviewsTable .= "<label><strong>" .$productInfo['invName']."</strong>"
-                        . " (Reviewed on " .$review['reviewDate']."): </label>";
+                $clientReviewsTable .= "<label><strong>" .$productInfo['name']."</strong>"
+                        . " (Reviewed on " .$review['date']."): </label>";
 
-                $clientReviewsTable .= "<a href='/shoes/reviews/index.php?action=edit-review&reviewId=$review[reviewId]' title='Click to modify'>Edit</a>";
-                $clientReviewsTable .= " | <a href='/shoes/reviews/index.php?action=delete&reviewId=$review[reviewId]' title='Click to modify'>Delete</a>";
+                $clientReviewsTable .= "<a href='/shoes/reviews/index.php?action=edit-review&reviewId=$review[id]' title='Click to modify'>Edit</a>";
+                $clientReviewsTable .= " | <a href='/shoes/reviews/index.php?action=delete&reviewId=$review[id]' title='Click to modify'>Delete</a>";
                 $clientReviewsTable .= "</li>";
             }
 

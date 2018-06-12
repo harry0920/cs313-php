@@ -1,11 +1,10 @@
 <?php
-/**
+
 if(!$_SESSION['loggedin'])
    { 
        header('location: /shoes/index.php');
        exit;
-   }   
-   **/
+   }
 ?>
 <!DOCTYPE html>
 <html>
@@ -59,7 +58,6 @@ if(!$_SESSION['loggedin'])
                         echo "<li>Firstname: ".$_SESSION['clientData']['firstname']."</li>";
                         echo "<li>Lastname: ".$_SESSION['clientData']['lastname']."</li>";
                         echo "<li>Email: ".$_SESSION['clientData']['email']."</li>";
-                       // echo "<li>Id: ".$_SESSION['clientData']['clientId']."</li>";
                         echo "</ul>";
                         
                         
