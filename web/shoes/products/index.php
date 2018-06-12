@@ -227,14 +227,6 @@ switch ($action) {
         
         $productDetail = getProductById($productId);
 
-       // var_dump($productDetail);
-        //
-        ///
-        ///  // $productThumbnail = getThumbnailImages($productId);
-
-
-/**
-
 
         if($_SESSION['loggedin'])
         {
@@ -246,15 +238,10 @@ switch ($action) {
     
         }
 
- *
- * **/
        $customerReviews = getReviewsByInvId($productId);
-        var_dump($customerReviews);
+
        $customerReviews = buildCustomerReviews($customerReviews);
 
-       var_dump($customerReviews);
-
-    /***
         if (!count($productDetail)) {
             $message = "<p class='notice'>Sorry, Product details coundn't exist.</p>";
         } else {
@@ -268,12 +255,7 @@ switch ($action) {
              $productThumbnailDisplay = buildThumbnailDisplay($productThumbnail);
         }
 
-      *
-
-
         include '../view/product-detail.php';
 
-      *
-      * **/
         break;
 }
