@@ -1,4 +1,5 @@
 <?php
+/**
 if ($_SESSION['clientData']['clientLevel'] < 2) {
     header('location: /shoes/index.php');
     exit;
@@ -8,6 +9,8 @@ if ($_SESSION['clientData']['clientLevel'] < 2) {
 if (isset($_SESSION['message'])) {
  $message = $_SESSION['message'];
 }
+ *
+ */
 ?>
 <!DOCTYPE html>
 <html>

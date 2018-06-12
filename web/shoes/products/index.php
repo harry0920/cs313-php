@@ -37,8 +37,6 @@ switch ($action) {
 
     case 'products':  //Sup3rU$er
         $products = getProductBasics();
-        var_dump($products);
-        /**
         if (count($products) > 0) {
             $prodList = '<table>';
             $prodList .= '<thead>';
@@ -56,8 +54,6 @@ switch ($action) {
         }
 
         include '../view/prod-mgmt.php';
-         *
-         ***/
         break;
 
     case 'new-cat':
