@@ -107,22 +107,9 @@
       <change beforePath="$PROJECT_DIR$/../acme/view/registration.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../acme/view/review-delete.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../acme/view/review-update.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/template.php" afterPath="$PROJECT_DIR$/template.php" />
-      <change beforePath="$PROJECT_DIR$/view/admin.php" afterPath="$PROJECT_DIR$/view/admin.php" />
-      <change beforePath="$PROJECT_DIR$/view/category.php" afterPath="$PROJECT_DIR$/view/category.php" />
-      <change beforePath="$PROJECT_DIR$/view/client-update.php" afterPath="$PROJECT_DIR$/view/client-update.php" />
-      <change beforePath="$PROJECT_DIR$/view/home.php" afterPath="$PROJECT_DIR$/view/home.php" />
-      <change beforePath="$PROJECT_DIR$/view/image-admin.php" afterPath="$PROJECT_DIR$/view/image-admin.php" />
-      <change beforePath="$PROJECT_DIR$/view/login.php" afterPath="$PROJECT_DIR$/view/login.php" />
-      <change beforePath="$PROJECT_DIR$/view/new-cat.php" afterPath="$PROJECT_DIR$/view/new-cat.php" />
-      <change beforePath="$PROJECT_DIR$/view/new-product.php" afterPath="$PROJECT_DIR$/view/new-product.php" />
-      <change beforePath="$PROJECT_DIR$/view/prod-delete.php" afterPath="$PROJECT_DIR$/view/prod-delete.php" />
-      <change beforePath="$PROJECT_DIR$/view/prod-mgmt.php" afterPath="$PROJECT_DIR$/view/prod-mgmt.php" />
-      <change beforePath="$PROJECT_DIR$/view/prod-update.php" afterPath="$PROJECT_DIR$/view/prod-update.php" />
-      <change beforePath="$PROJECT_DIR$/view/product-detail.php" afterPath="$PROJECT_DIR$/view/product-detail.php" />
-      <change beforePath="$PROJECT_DIR$/view/registration.php" afterPath="$PROJECT_DIR$/view/registration.php" />
-      <change beforePath="$PROJECT_DIR$/view/review-delete.php" afterPath="$PROJECT_DIR$/view/review-delete.php" />
-      <change beforePath="$PROJECT_DIR$/view/review-update.php" afterPath="$PROJECT_DIR$/view/review-update.php" />
+      <change beforePath="$PROJECT_DIR$/view/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/view/.idea/view.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/view/.idea/workspace.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -228,12 +215,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528792961118</updated>
-      <workItem from="1528792962269" duration="299000" />
+      <workItem from="1528792962269" duration="326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299000" />
+    <option name="totallyTimeSpent" value="326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
