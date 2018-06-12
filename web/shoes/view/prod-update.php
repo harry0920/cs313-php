@@ -160,22 +160,18 @@ $catList .= '</select>';
                     <ul class="footer-menu">
                         <li><a href="#">Products | </a></li>
                         <li><a href="#">Reviews  | </a></li>
-                        <li><a href="#">Recipes  | </a></li>
-                        <li><a href="#">Demos  | </a></li>
-                        <li><a href="#">First Aid  | </a></li>
-                        <li><a href="#">Policy  | </a></li>
                         <li><a href="#">About  | </a></li>
                         <li><a href="#">Contact  </a></li>
 
                     </ul>
                 </div>
-                <div class="CR">&copy; shoes, All rights reserved.</div>
+                <div class="CR">&copy; SHOES, All rights reserved.</div>
                 <div class="CR">
-                    All images used are believed to be in "Fair Use". 
+                    All images used are believed to be in "Fair Use".
                     Please notify the author if any are not and they will be removed.
                 </div>
                 <div class="CR">
-                    Last Updated: 3 January, 2017
+                    Last Updated:  June, 2018
                 </div>
             </footer>
         </main>
