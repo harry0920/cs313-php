@@ -12,7 +12,7 @@
 function addCateogry($categoryName) {
 
     $db = shoesDB();
-    $sql = 'INSERT INTO categories(name)
+    $sql = 'INSERT INTO categories(categoryname)
             VALUES (:categoryName)';
 
     $stmt = $db->prepare($sql);
@@ -38,7 +38,7 @@ function addProduct($invName, $invDescription, $invImage, $invThumbnail,  $categ
 
     $sql = 'INSERT INTO inventory (name, description, image, thumbnail,price,stock,categoryId) 
             VALUES (:invName, :invDescription, :invImage, :invThumbnail,
-            :invPrice, :invStock, :invSize, :categoryId)';
+            :invPrice, :invStock, :categoryId)';
 
     $stmt = $db->prepare($sql);
 
@@ -139,7 +139,7 @@ function deleteProduct($prodId) {
 
 function getProductsByCategory($type) {
     $db = shoesDB();
-    $sql = 'SELECT * FROM inventory WHERE categoryid IN (SELECT id FROM categories WHERE categoryName = :catType)';
+    $sql = 'SELECT * FROM inventory WHERE categoryid IN (SELECT id FROM categories WHERE categoryname = :catType)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':catType', $type, PDO::PARAM_STR);
     $stmt->execute();

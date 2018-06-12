@@ -33,7 +33,7 @@ function storeImages($imgPath, $prodId, $imgName) {
 // Get Image Information from images table
 function getImages() {
     $db = shoesDB();
-    $sql = 'SELECT id, path, name, "date", inventory.id, images.name FROM images JOIN inventory ON images.inventoryId = inventory.id';
+    $sql = 'SELECT id, path, name, date , inventory.id, images.name FROM images JOIN inventory ON images.inventoryId = inventory.id';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $imageArray = $stmt->fetchAll(PDO::FETCH_NAMED);

@@ -313,9 +313,9 @@ function buildCustomerReviews($reviews)
         
         $customerReviews .= "<li>";
         $customerReviews .= "<label><strong>".$clientInfo['firstname'][0].$clientInfo['lastname']."</strong>"
-                ." wrote on ".$review["date"].": </label>";
+                ." wrote on ".$review['date'].": </label>";
         
-        $customerReviews .= $review["text"];
+        $customerReviews .= $review['text'];
         $customerReviews .= "</li>";
        
     }

@@ -10,7 +10,7 @@
  **********************************/
 function addReview($text, $invId, $clientId) {
     $db = shoesDB();
-    $sql = 'INSERT INTO reviews ("text", inventoryId, "date", clientId) VALUES (:text, :invId, CURRENT_TIMESTAMP, :clientId)';
+    $sql = 'INSERT INTO reviews (text, inventoryId, date , clientId) VALUES (:text, :invId, CURRENT_TIMESTAMP, :clientId)';
     $stmt = $db->prepare($sql);
     
     $stmt->bindValue(':text', $text, PDO::PARAM_STR);
@@ -20,7 +20,7 @@ function addReview($text, $invId, $clientId) {
     $stmt->execute();
 
     $rowsChanged = $stmt->rowCount();
-    $stmt->closeCursor();
+    $stmt->closeCursor();i
     return $rowsChanged;
 }
 
@@ -30,7 +30,7 @@ function addReview($text, $invId, $clientId) {
  ****************************************************/
 function getReviewsByInvId($invId) {
     $db = shoesDB();
-    $sql = 'SELECT * from reviews where inventoryid = :invId ORDER BY reviewDate DESC';
+    $sql = 'SELECT * from reviews where inventoryid = :invId ORDER BY date DESC';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':invId', $invId, PDO::PARAM_INT);
     $stmt->execute();
@@ -46,7 +46,7 @@ function getReviewsByInvId($invId) {
  ****************************************************/
 function getReviewsByClientId($clientId) {
     $db = shoesDB();
-    $sql = 'SELECT * from reviews where clientid = :clientId ORDER BY reviewDate DESC';
+    $sql = 'SELECT * from reviews where clientid = :clientId ORDER BY date DESC';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':clientId', $clientId, PDO::PARAM_INT);
     $stmt->execute();
@@ -75,8 +75,7 @@ function getReview($reviewId) {
  ****************************************************/
 function updateReview($reviewId, $text) {
     $db = shoesDB();
-    $sql = 'UPDATE reviews SET "text" = :text, reviewDate = CURRENT_TIME() '
-            . 'WHERE id = :reviewId';
+    $sql = 'UPDATE reviews SET text = :text, date = CURRENT_TIMESTAMP WHERE id = :reviewId';
     $stmt = $db->prepare($sql);
     
     $stmt->bindValue(':text', $text, PDO::PARAM_STR);

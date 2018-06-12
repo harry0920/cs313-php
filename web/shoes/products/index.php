@@ -25,7 +25,6 @@ $navList = navigation($categories);
 
 $accountStatus = getLoginStatus();
 
-
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
@@ -235,10 +234,10 @@ switch ($action) {
         
         $productDetail = getProductById($productId);
 
-        var_dump($productDetail);
-
-
-  //   $productThumbnail = getThumbnailImages($productId);
+       // var_dump($productDetail);
+        //
+        ///
+        ///  // $productThumbnail = getThumbnailImages($productId);
 
 
 /**
@@ -256,17 +255,20 @@ switch ($action) {
 
  *
  * **/
-       $customerReviews = getReviewsByInvId($productId);  
+       $customerReviews = getReviewsByInvId($productId);
+        var_dump($customerReviews);
        $customerReviews = buildCustomerReviews($customerReviews);
-        
-  
+
+       var_dump($customerReviews);
+
+    /***
         if (!count($productDetail)) {
             $message = "<p class='notice'>Sorry, Product details coundn't exist.</p>";
         } else {
              $productDetailDisplay = buildProductDetail($productDetail);
         }
         
-     /***
+
          if (!count($productThumbnail)) {
             //$message = "<p class='notice'>Sorry, Product thumbnail not avai exist.</p>";
         } else {
