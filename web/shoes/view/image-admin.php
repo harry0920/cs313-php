@@ -15,7 +15,7 @@ if (isset($_SESSION['message'])) {
 
             <header>
                 <div class="logo">
-                    <img src="/shoes/images/logo.gif" alt="logo"/>
+                    <img src="/shoes/Images/logo.gif" alt="logo"/>
                 </div>
                 <div class="side-options">
                     <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['firstname']))
@@ -23,12 +23,12 @@ if (isset($_SESSION['message'])) {
                          echo "Welcome ".$_SESSION['clientData']['firstname'];
                      }
                    ?></a>
-                    <span><img src="/shoes/images/account.gif" alt=""/> 
+                    <span><img src="/shoes/Images/account.gif" alt=""/>
                         <?php
                         echo $accountStatus;
                         ?>
                     </span>
-                    <span><img src="/shoes/images/help.gif" alt=""/>Help</span>
+                    <span><img src="/shoes/Images/help.gif" alt=""/>Help</span>
                 </div>
 
                 <nav id= "container">
