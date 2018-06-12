@@ -9,7 +9,7 @@ session_start();
 
 require_once '../library/connections.php';
 require_once '../library/functions.php';
-require_once '../model/acme-model.php';
+require_once '../model/shoes-model.php';
 require_once '../model/products-model.php';
 require_once '../model/uploads-model.php';
 
@@ -36,7 +36,7 @@ $accountStatus = getLoginStatus();
  * Variables for use with the Image Upload Functionality
  * **************************************************** */
 // directory name where uploaded images are stored
-$image_dir = '/acme/images/products/';
+$image_dir = '/shoes/images/products/';
 // The path is the full path from the server root
 $image_dir_path = $_SERVER['DOCUMENT_ROOT'] . $image_dir;
 

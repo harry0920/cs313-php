@@ -77,7 +77,7 @@ switch ($action) {
 
         $categoryOutcome = addCateogry($categoryname);
         if ($categoryOutcome === 1) {
-            header('location: ../?action=products');
+            header('location: ?action=products');
             exit;
         } else {
             $message = "<p>Sorry $categoryname cannot be added to the database</p>";
