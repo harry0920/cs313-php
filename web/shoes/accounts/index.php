@@ -27,9 +27,7 @@ $navList = navigation($categories);
 
 $accountStatus = getLoginStatus();
 
-var_dump($accountStatus);
-
-/**
+//var_dump($accountStatus);
 
 
 $action = filter_input(INPUT_POST, 'action');
@@ -266,6 +264,5 @@ switch ($action) {
         include '../view/login.php';
         break;
 }
-         
-**/
+
           
