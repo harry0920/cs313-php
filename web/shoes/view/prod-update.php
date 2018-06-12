@@ -39,7 +39,7 @@ $catList .= '</select>';
 
             <header>
                 <div class="logo">
-                    <img src="/shoes/images/logo.gif" alt="logo"/>
+                    <img src="/shoes/Images/logo.gif" alt="logo"/>
                 </div>
                 <div class="side-options">
                   <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['firstname']))
