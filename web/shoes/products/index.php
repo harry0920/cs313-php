@@ -99,17 +99,9 @@ switch ($action) {
         $inventoryImage = filter_input(INPUT_POST, 'inventoryimage', FILTER_SANITIZE_STRING);
         $inventoryThumbnail = filter_input(INPUT_POST, 'inventorythumbnail', FILTER_SANITIZE_STRING);
         $inventoryPrice = filter_input(INPUT_POST, 'inventoryprice', FILTER_SANITIZE_STRING);
-       // $inventoryWeight = filter_input(INPUT_POST, 'inventoryweight', FILTER_SANITIZE_STRING);
-       // $inventorySize = filter_input(INPUT_POST, 'inventorysize', FILTER_SANITIZE_STRING);
         $inventoryStock = filter_input(INPUT_POST, 'inventorystock', FILTER_SANITIZE_STRING);
-        // $inventoryLocation = filter_input(INPUT_POST, 'inventorylocation', FILTER_SANITIZE_STRING);
         $categoryId = filter_input(INPUT_POST, 'category', FILTER_SANITIZE_STRING);
-        //$inventoryVendor = filter_input(INPUT_POST, 'inventoryvendor', FILTER_SANITIZE_STRING);
-        //$inventoryStyle = filter_input(INPUT_POST, 'inventorystyle', FILTER_SANITIZE_STRING);
-
         $inventoryPrice = checkFloat($inventoryPrice);
-        //$inventoryWeight = checkFloat($inventoryWeight);
-        //$inventorySize = checkFloat($inventorySize);
         $inventoryStock = checkInteger($inventoryStock);
         $categoryId = checkInteger($categoryId);
 
