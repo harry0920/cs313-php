@@ -44,7 +44,7 @@ switch ($action) {
             $prodList .= '</thead>';
             $prodList .= '<tbody>';
             foreach ($products as $product) {
-                $prodList .= "<tr><td>$product[invName]</td>";
+                $prodList .= "<tr><td>$product[name]</td>";
                 $prodList .= "<td><a href='/shoes/products?action=mod&id=$product[id]' title='Click to modify'>Modify</a></td>";
                 $prodList .= "<td><a href='/shoes/products?action=del&id=$product[id]' title='Click to delete'>Delete</a></td></tr>";
             }
@@ -279,7 +279,8 @@ switch ($action) {
 
 
         include '../view/product-detail.php';
-        break;
+
       *
       * **/
+        break;
 }
