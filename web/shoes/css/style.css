@@ -32,7 +32,7 @@ main{
 
 header {
     position: relative;
-    color: #de2226;
+    color: #black;
     font-family: Comic Sans MS;
    
 }
@@ -50,7 +50,7 @@ header {
 }
 .side-options a{
     text-decoration: none;
-    color: #de2226;
+    color: #black;
 }
 
 .side-options img{
@@ -75,7 +75,7 @@ nav{
 }
 
 ul#flex-container{
-    background: #de2226;
+    background: #black;
     list-style-type: none;
     display: flex;
     margin:0;
@@ -94,7 +94,7 @@ ul#flex-container{
     font-weight: bold;
     font-size: 1em;
     text-align: center;
-    background: #de2226;
+    background: #black;
     padding-top: 10px;
     
 }
@@ -141,63 +141,8 @@ header li a.active {
 
 header li a:hover:not(.active) {
     background-color: #ffffff;
-    color: #de2226;
+    color: #black;
 }
-#cart{
-  
-    background-image: url("../images/dinnerrocketfeature.jpg");
-   
-    
-    background-size: cover;
-    width: inherit;
-    margin: 0 10px 10px 10px;
-    height: 400px;
-    display: flex;
-    flex-shrink: 2;;
-    
-}
-
-#cart img.bg{
-    max-width:100%;
-}
-#cart ul{
-    position: relative;
-    left: 70%;
-    top:25%;
-    width:30%;
-    height: 40%;
-    list-style-type: none;
-    margin:10px;
-    padding:0;
-    flex-direction: row;
-    flex-wrap: wrap;  
-    color: #990033;
-}
-
-
-.recipes{
-    display: flex;
-}
-.recipes ul{
-    width:40%;
-    height: 40%;
-}
-
-#recipes{
-     list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-lh{
-    font-size:1.5em;
-}
-#recipes li{
-    flex-grow: 1;
-    width:100px; 
-    height: 100px;
-}
-
 
 .bar{
     background-color: black;
