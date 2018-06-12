@@ -1,10 +1,11 @@
 <?php
+/**
    if(!$_SESSION['loggedin'])
    { 
        header('location: /shoes/index.php');  
        exit;
    }   
-   
+   **/
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,9 +21,9 @@
                     <img src="/shoes/images/logo.gif" alt="logo"/>
                 </div>
                 <div class="side-options">
-                  <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['clientFirstname']))
+                  <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['firstname']))
                      { 
-                         echo "Welcome ".$_SESSION['clientData']['clientFirstname'];
+                         echo "Welcome ".$_SESSION['clientData']['firstname'];
                      }
                    ?></a>
                     <span><img src="/shoes/images/account.gif" alt=""/> 
@@ -53,7 +54,7 @@
                         <input type="text" name="firstname" id="firstname" 
                                placeholder="Enter Your First Name" 
                                <?php if(isset($firstname)){echo "value='$firstname'";} 
-                               elseif(isset($clientInfo['clientFirstName'])) {echo "value='$clientInfo[clientFirstName]'"; }
+                               elseif(isset($clientInfo['firstName'])) {echo "value='$clientInfo[firstName]'"; }
                                ?> required>
 
                     </li>
@@ -62,7 +63,7 @@
                         <input type="text" name="lastname" id="lastname" 
                                placeholder="Enter Your First Name" 
                                <?php if(isset($lastname)){echo "value='$lastname'";} 
-                               elseif(isset($clientInfo['clientLastName'])) {echo "value='$clientInfo[clientLastName]'"; }
+                               elseif(isset($clientInfo['lastName'])) {echo "value='$clientInfo[lastName]'"; }
                                ?> required>
 
                     </li>
@@ -71,7 +72,7 @@
                         <input type="text" name="email" id="email" 
                                placeholder="Enter Your First Name" 
                                <?php if(isset($email)){echo "value='$email'";} 
-                               elseif(isset($clientInfo['clientEmail'])) {echo "value='$clientInfo[clientEmail]'"; }
+                               elseif(isset($clientInfo['email'])) {echo "value='$clientInfo[email]'"; }
                                ?> required>
 
                     </li>
@@ -83,8 +84,8 @@
                         <input type="hidden" name="action" value="updateClient">
                         
                         <input type="hidden" name="clientId" value="<?php 
-                        if(isset($clientInfo['clientId']))
-                                { echo $clientInfo['clientId'];} 
+                        if(isset($clientInfo['id']))
+                                { echo $clientInfo['id'];}
                                 elseif(isset($clientId))
                                     { echo $clientId; }?>">
                     </li>
@@ -118,8 +119,8 @@
                         <input type="hidden" name="action" value="updatePassword">
                         
                         <input type="hidden" name="clientId" value="<?php 
-                        if(isset($clientInfo['clientId']))
-                                { echo $clientInfo['clientId'];} 
+                        if(isset($clientInfo['id']))
+                                { echo $clientInfo['id'];}
                                 elseif(isset($clientId))
                                     { echo $clientId; }?>">
                     </li>

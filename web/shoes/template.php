@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>ACME</title>
+        <title>SHOES</title>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -39,7 +39,7 @@
 
                     </ul>
                 </div>
-                <div class="CR">&copy; ACME, All rights reserved.</div>
+                <div class="CR">&copy; SHOES, All rights reserved.</div>
                 <div class="CR">
                     All images used are believed to be in "Fair Use". 
                     Please notify the author if any are not and they will be removed.

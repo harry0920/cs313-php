@@ -1,6 +1,6 @@
 <?php
-/**
-if ($_SESSION['clientData']['clientLevel'] < 2) {
+
+if ($_SESSION['clientData']['level'] < 2) {
     header('location: /shoes/index.php');
     exit;
 }
@@ -9,8 +9,7 @@ if ($_SESSION['clientData']['clientLevel'] < 2) {
 if (isset($_SESSION['message'])) {
  $message = $_SESSION['message'];
 }
- *
- */
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,9 +26,9 @@ if (isset($_SESSION['message'])) {
                     <img src="/shoes/images/logo.gif" alt="logo"/>
                 </div>
                 <div class="side-options">
-<a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['clientFirstname']))
+<a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['firstname']))
                      { 
-                         echo "Welcome ".$_SESSION['clientData']['clientFirstname'];
+                         echo "Welcome ".$_SESSION['clientData']['firstname'];
                      }
                    ?></a>
                     <span><img src="/shoes/images/account.gif" alt=""/> 

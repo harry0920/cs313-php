@@ -1,5 +1,6 @@
 <?php
-if ($_SESSION['clientData']['clientLevel'] < 2) {
+
+if ($_SESSION['clientData']['level'] < 2) {
     header('location: /shoes/index.php');
     exit;
 }
@@ -7,8 +8,8 @@ if ($_SESSION['clientData']['clientLevel'] < 2) {
 <!DOCTYPE html>
 <html>
     <head>
-        <title><?php if (isset($prodInfo['invName'])) {
-    echo "Delete $prodInfo[invName] ";
+        <title><?php if (isset($prodInfo['name'])) {
+    echo "Delete $prodInfo[name] ";
 } elseif (isset($prodName)) {
     echo $prodName;
 } ?> | shoes, Inc</title>
@@ -23,9 +24,9 @@ if ($_SESSION['clientData']['clientLevel'] < 2) {
                     <img src="/shoes/images/logo.gif" alt="logo"/>
                 </div>
                 <div class="side-options">
-                    <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['clientFirstname']))
+                    <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['firstname']))
                      { 
-                         echo "Welcome ".$_SESSION['clientData']['clientFirstname'];
+                         echo "Welcome ".$_SESSION['clientData']['firstname'];
                      }
                    ?></a>
                     <span><img src="/shoes/images/account.gif" alt=""/> 
@@ -41,8 +42,8 @@ if ($_SESSION['clientData']['clientLevel'] < 2) {
                 </nav>
             </header> 
 
-            <h1><?php if (isset($prodInfo['invName'])) {
-    echo "Delete $prodInfo[invName] ";
+            <h1><?php if (isset($prodInfo['name'])) {
+    echo "Delete $prodInfo[name] ";
 } elseif (isset($prodName)) {
     echo $prodName;
 }
@@ -58,21 +59,21 @@ if (isset($message)) {
                 <fieldset>
 
                     <label for="prodName">Product Name</label>
-                    <input type="text" readonly name="prodName" id="prodName" <?php if (isset($prodInfo['invName'])) {
-    echo "value='$prodInfo[invName]'";
+                    <input type="text" readonly name="prodName" id="prodName" <?php if (isset($prodInfo['name'])) {
+    echo "value='$prodInfo[name]'";
 } ?>>
 
                     <label for="prodDesc">Product Description</label>
-                    <textarea name="prodDesc" readonly id="prodDesc"><?php if (isset($prodInfo['invDescription'])) {
-    echo $prodInfo['invDescription'];
+                    <textarea name="prodDesc" readonly id="prodDesc"><?php if (isset($prodInfo['description'])) {
+    echo $prodInfo['description'];
 } ?></textarea>
 
                     <label>&nbsp;</label> 
                     <input type="submit" id="regbtn" name="submit" value="Delete Product">
 
                     <input type="hidden" name="action" value="deleteProd">
-                    <input type="hidden" name="prodId" value="<?php if (isset($prodInfo['invId'])) {
-    echo $prodInfo['invId'];
+                    <input type="hidden" name="prodId" value="<?php if (isset($prodInfo['id'])) {
+    echo $prodInfo['id'];
 } ?>">
 
                 </fieldset>

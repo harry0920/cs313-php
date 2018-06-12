@@ -1,6 +1,6 @@
 <?php 
 
- if($_SESSION['clientData']['clientLevel'] < 2)
+ if($_SESSION['clientData']['level'] < 2)
    { 
        header('location: /shoes/index.php');  
        exit;
@@ -8,15 +8,15 @@
  
 $catList = '<select name="category">';
  foreach ($categories as $category) {
-     $catList .= "<option value='$category[categoryId]'";
+     $catList .= "<option value='$category[id]'";
      if(isset($categoryId))
      {
-         if($category['categoryId'] === $categoryId)
+         if($category['id'] === $categoryId)
          {
              $catList .= 'selected';
          }
      }  
-     $catList .= ">$category[categoryName]</option>"; 
+     $catList .= ">$category[name]</option>";
     }
     $catList .= '</select>';
 
@@ -36,9 +36,9 @@ $catList = '<select name="category">';
                     <img src="/shoes/images/logo.gif" alt="logo"/>
                 </div>
                 <div class="side-options">
-                 <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['clientFirstname']))
+                 <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['firstname']))
                      { 
-                         echo "Welcome ".$_SESSION['clientData']['clientFirstname'];
+                         echo "Welcome ".$_SESSION['clientData']['firstname'];
                      }
                    ?></a>
                     <span><img src="/shoes/images/account.gif" alt=""/> 

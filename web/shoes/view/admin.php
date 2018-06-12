@@ -1,10 +1,11 @@
 <?php
-   if(!$_SESSION['loggedin'])
+/**
+if(!$_SESSION['loggedin'])
    { 
        header('location: /shoes/index.php');
        exit;
    }   
-   
+   **/
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,9 +22,9 @@
                     <img src="/shoes/images/logo.gif" alt="logo"/>
                 </div>
                 <div class="side-options">
-                    <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['clientFirstname']))
+                    <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['firstname']))
                      { 
-                         echo "Welcome ".$_SESSION['clientData']['clientFirstname'];
+                         echo "Welcome ".$_SESSION['clientData']['firstname'];
                      }
                    ?></a>
                     <span><img src="/shoes/images/account.gif" alt=""/>
@@ -44,7 +45,7 @@
                 if (isset($_SESSION['clientData'])) 
                     {
                         
-                        echo "<h1>".$_SESSION['clientData']['clientFirstname']."</h1>";
+                        echo "<h1>".$_SESSION['clientData']['firstname']."</h1>";
                        
                         if (isset($message)) {
                             echo $message;
@@ -55,18 +56,18 @@
                         }
                
                         echo "<ul>";
-                        echo "<li>Firstname: ".$_SESSION['clientData']['clientFirstname']."</li>";
-                        echo "<li>Lastname: ".$_SESSION['clientData']['clientLastname']."</li>";
-                        echo "<li>Email: ".$_SESSION['clientData']['clientEmail']."</li>";
+                        echo "<li>Firstname: ".$_SESSION['clientData']['firstname']."</li>";
+                        echo "<li>Lastname: ".$_SESSION['clientData']['lastname']."</li>";
+                        echo "<li>Email: ".$_SESSION['clientData']['email']."</li>";
                        // echo "<li>Id: ".$_SESSION['clientData']['clientId']."</li>";
                         echo "</ul>";
                         
                         
                         
-                        echo "<p><a href='/shoes/accounts?action=update&id=".$_SESSION['clientData']['clientId'].
+                        echo "<p><a href='/shoes/accounts?action=update&id=".$_SESSION['clientData']['id'].
                                 "'>Update Account Information</a></p>";
                         
-                        if ($_SESSION['clientData']['clientLevel'] > 1)
+                        if ($_SESSION['clientData']['level'] > 1)
                         {
                             echo "<br><h2>Administrative Functions</h2>";
                             echo "<p><a href='../products/index.php'>Add, Modify or Remove Products</a></p>";

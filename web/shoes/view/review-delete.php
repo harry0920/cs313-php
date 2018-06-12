@@ -4,7 +4,7 @@
    { 
        header('location: /shoes/index.php');  
        exit;
-   } 
+   }
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,9 +21,9 @@
                     <img src="/shoes/images/logo.gif" alt="logo"/>
                 </div>
                 <div class="side-options">
-                  <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['clientFirstname']))
+                  <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['Firstname']))
                      { 
-                         echo "Welcome ".$_SESSION['clientData']['clientFirstname'];
+                         echo "Welcome ".$_SESSION['clientData']['firstname'];
                      }
                    ?></a>
                     <span><img src="/shoes/images/account.gif" alt=""/> 
@@ -39,7 +39,7 @@
                 </nav>
             </header> 
             
-            <h1><?php if(isset($prodInfo['invName'])){ echo "Modify $prodInfo[invName] ";} elseif(isset($prodName)) { echo $prodName; }?> Review</h1>
+            <h1><?php if(isset($prodInfo['name'])){ echo "Modify $prodInfo[name] ";} elseif(isset($prodName)) { echo $prodName; }?> Review</h1>
                 <?php
                 if (isset($message)) {
                     echo $message;
@@ -56,8 +56,8 @@
                                   readonly ><?php 
                         if(isset($reviewText))
                             {echo $reviewText;} 
-                        elseif(isset($reviewInfo['reviewText']))
-                            {echo $reviewInfo['reviewText']; }
+                        elseif(isset($reviewInfo['text']))
+                            {echo $reviewInfo['text']; }
                         ?></textarea>
                         
                     
@@ -71,8 +71,8 @@
                         <input type="hidden" name="action" value="del-review">
                         
                         <input type="hidden" name="reviewId" value="
-                            <?php if(isset($reviewInfo['reviewId']))
-                                { echo $reviewInfo['reviewId'];} 
+                            <?php if(isset($reviewInfo['id']))
+                                { echo $reviewInfo['id'];}
                                 elseif(isset($reviewId))
                                     { echo $reviewId; } 
                                     ?>">

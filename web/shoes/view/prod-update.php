@@ -1,27 +1,26 @@
 <?php 
 
- if($_SESSION['clientData']['clientLevel'] < 2)
+if($_SESSION['clientData']['level'] < 2)
    { 
        header('location: /shoes/index.php');  
        exit;
-   } 
- 
+   }
    
 // Build the categories option list
 $catList = '<select name="category" id="category">';
 //$catList .= "<option>Choose a Category</option>";
 foreach ($categories as $category) {
- $catList .= "<option value='$category[categoryId]'";
+ $catList .= "<option value='$category[id]'";
   if(isset($catType)){
-   if($category['categoryId'] === $catType){
+   if($category['id'] === $catType){
    $catList .= ' selected ';
   }
  } elseif(isset($prodInfo['categoryId'])){
-  if($category['categoryId'] === $prodInfo['categoryId']){
+  if($category['id'] === $prodInfo['categoryId']){
    $catList .= ' selected ';
   }
 }
-$catList .= ">$category[categoryName]</option>";
+$catList .= ">$category[name]</option>";
 }
 $catList .= '</select>';
 
@@ -31,7 +30,7 @@ $catList .= '</select>';
 <!DOCTYPE html>
 <html>
     <head>
-        <title><?php if(isset($prodInfo['invName'])){ echo "Modify $prodInfo[invName] ";} elseif(isset($prodName)) { echo $prodName; }?> | shoes, Inc</title>
+        <title><?php if(isset($prodInfo['name'])){ echo "Modify $prodInfo[name] ";} elseif(isset($prodName)) { echo $prodName; }?> | shoes, Inc</title>
         <link href="/shoes/css/style.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -43,9 +42,9 @@ $catList .= '</select>';
                     <img src="/shoes/images/logo.gif" alt="logo"/>
                 </div>
                 <div class="side-options">
-                  <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['clientFirstname']))
+                  <a href="/shoes/accounts/index.php?action=loggedIn"><?php if(isset($_SESSION['clientData']['firstname']))
                      { 
-                         echo "Welcome ".$_SESSION['clientData']['clientFirstname'];
+                         echo "Welcome ".$_SESSION['clientData']['firstname'];
                      }
                    ?></a>
                     <span><img src="/shoes/images/account.gif" alt=""/> 
@@ -61,7 +60,7 @@ $catList .= '</select>';
                 </nav>
             </header> 
             
-            <h1><?php if(isset($prodInfo['invName'])){ echo "Modify $prodInfo[invName] ";} elseif(isset($prodName)) { echo $prodName; }?></h1>
+            <h1><?php if(isset($prodInfo['name'])){ echo "Modify $prodInfo[name] ";} elseif(isset($prodName)) { echo $prodName; }?></h1>
                 <?php
                 if (isset($message)) {
                     echo $message;
@@ -74,7 +73,7 @@ $catList .= '</select>';
                         <input type="text" size="30" maxlength="50" name="inventoryname" 
                                id="inventoryname" placeholder="Enter Product Name"
                                <?php if(isset($inventoryName)){echo "value='$inventoryName'";}
-                               elseif(isset($prodInfo['invName'])) {echo "value='$prodInfo[invName]'"; }
+                               elseif(isset($prodInfo['name'])) {echo "value='$prodInfo[name]'"; }
                                ?>required>
 
                     </li>
@@ -85,8 +84,8 @@ $catList .= '</select>';
                                   required ><?php 
                         if(isset($inventoryDescription))
                             {echo $inventoryDescription;} 
-                        elseif(isset($prodInfo['invDescription']))
-                            {echo $prodInfo['invDescription']; }
+                        elseif(isset($prodInfo['description']))
+                            {echo $prodInfo['description']; }
                         ?></textarea>
                         
                     
@@ -96,7 +95,7 @@ $catList .= '</select>';
                         <input type="text" size="30" maxlength="50" name="inventoryimage" 
                                id="inventoryimage" placeholder="Enter Product Image" 
                         <?php if(isset($inventoryImage)){echo "value='$inventoryImage'";}
-                        elseif(isset($prodInfo['invImage'])) {echo "value='$prodInfo[invImage]'"; }
+                        elseif(isset($prodInfo['image'])) {echo "value='$prodInfo[image]'"; }
                         ?>required>
 
                     </li>
@@ -107,7 +106,7 @@ $catList .= '</select>';
                                id="inventorythumbnail" 
                                placeholder="Enter Product Thumbnail" 
                                <?php if(isset($inventoryThumbnail)){echo "value='$inventoryThumbnail'";} 
-                               elseif(isset($prodInfo['invName'])) {echo "value='$prodInfo[invName]'"; }
+                               elseif(isset($prodInfo['name'])) {echo "value='$prodInfo[name]'"; }
                                ?>required>
 
                     </li>
@@ -118,8 +117,8 @@ $catList .= '</select>';
                                id="inventoryprice" step="0.1"
                                placeholder="Enter Product Price" 
                                <?php if(isset($inventoryPrice)){echo "value='$inventoryPrice'";} 
-                               elseif(isset($prodInfo['invPrice'])) 
-                                   {echo "value='$prodInfo[invPrice]'"; }?>required>
+                               elseif(isset($prodInfo['price']))
+                                   {echo "value='$prodInfo[price]'"; }?>required>
 
                     </li>
                     
@@ -129,67 +128,14 @@ $catList .= '</select>';
                                id="inventorystock" 
                                placeholder="Enter Product Stock" 
                                <?php if(isset($inventoryStock)){echo "value='$inventoryStock'";} 
-                               elseif(isset($prodInfo['invStock'])) 
-                                   {echo "value='$prodInfo[invStock]'"; }?>required>
+                               elseif(isset($prodInfo['stock']))
+                                   {echo "value='$prodInfo[stock]'"; }?>required>
 
                     </li>
-                    
-                     <li>
-                        <label for="inventorysize">Product Size</label>
-                        <input type="number" size="10"
-                               name="inventorysize" id="inventorysize" 
-                               placeholder="Enter Product Size" step="0.1"
-                               <?php if(isset($inventorySize)){echo "value='$inventorySize'";}
-                               elseif(isset($prodInfo['invSize'])) {echo "value='$prodInfo[invSize]'";}
-                               ?>
-                               required>
 
-                    </li>
-                    <li>
-                        <label for="inventoryweight">Product Weight</label>
-                        <input type="number" size="6" name="inventoryweight" 
-                               id="inventoryweight" step="0.1"
-                               placeholder="Enter Product Weight" 
-                               <?php if(isset($inventoryWeight)){echo "value='$inventoryWeight'";} 
-                               elseif(isset($prodInfo['invWeight']))
-                                   {echo "value='$prodInfo[invWeight]'"; }?>required>
-
-                    </li>
-                    
-                    <li>
-                        <label for="inventorylocation">Product Location</label>
-                        <input type="text" size="30" maxlength="35"
-                               name="inventorylocation" 
-                               id="inventorylocation" placeholder="Enter Product Location"
-                               <?php if(isset($inventoryLocation)){echo "value='$inventoryLocation'";} 
-                               elseif(isset($prodInfo['invLocation'])) 
-                                   {echo "value='$prodInfo[invLocation]'"; }?>required>
-
-                    </li>
-                   
                     <li>
                         <label>Category</label>
                         <?php echo $catList; ?>
-                    </li>
-                    <li>
-                        <label for="inventoryvendor">Product Vendor</label>
-                        <input type="text" maxlength="20" size="20" 
-                               name="inventoryvendor" 
-                       <?php if(isset($inventoryVendor)){echo "value='$inventoryVendor'";}
-                       elseif(isset($prodInfo['invVendor'])) {echo "value='$prodInfo[invVendor]'"; }
-                       ?>
-                               required id="inventoryvendor" placeholder="Enter Product Vendor">
-                    </li>
-                    
-                     <li>
-                         <label for="inventorystyle">Product Style</label>
-                        <input type="text" maxlength="20" size="20"
-                               name="inventorystyle" id="inventorystyle"
-                               placeholder="Enter Product Style" 
-                               <?php if(isset($inventoryStyle)){echo "value='$inventoryStyle'";} 
-                               elseif(isset($prodInfo['invStyle'])) {echo "value='$prodInfo[invStyle]'"; }
-                               ?>
-                               required>
                     </li>
                     <li>       
                         <button type="submit" name="submit" id="regbtn" value="Update Product">Update Product</button>
@@ -198,8 +144,8 @@ $catList .= '</select>';
                         <input type="hidden" name="action" value="updateProd">
                         
                         <input type="hidden" name="prodId" value="
-                            <?php if(isset($prodInfo['invId']))
-                                { echo $prodInfo['invId'];} 
+                            <?php if(isset($prodInfo['id']))
+                                { echo $prodInfo['id'];}
                                 elseif(isset($prodId))
                                     { echo $prodId; } 
                                     ?>">
